@@ -129,30 +129,28 @@ a:visited {
  }
 
 
-a:focus { text-decoration: none; color:orange; }
+a:hover { text-decoration: none; color:green; }
 a:active { text-decoration: none; color:teal; }
 
-#posts ul {
-  list-style: none; /* remove the bullet points */
-  padding: 0; /* remove the default padding */
-  margin: 0; /* remove the default margin */
-}
 
-#posts li {
-  display: flex; /* use flexbox to align the elements horizontally */
-  align-items: center; /* center the elements vertically */
-  margin-bottom: 10px; /* add some margin to the bottom of each list item */
+
+
+.posts {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+  padding-left: 0px;
+  margin-top: 40px;
+  gap: 6px;
 }
 
 .date {
-  width: 120px; /* set a fixed width for the date */
-  font-weight: bold; /* make the date bold */
-  margin-right: 10px; /* add some margin to the right of the date */
+  font-weight: bold;
+  margin-right: 16px;
 }
 
-.separator {
-  margin: 0 10px; /* add some margin to the separator */
-}
+
 
 a {
   flex-grow: 1; /* make the link take up the remaining space in the list item */
@@ -218,6 +216,7 @@ ul {
   flex-direction: column;
   height: 100%;
   padding-left: 0px;
+  margin-top: 40px;
   align-items: center;
   gap: 6px;
 }
@@ -237,17 +236,17 @@ ul {
 
 
 /* the solid block of tool tip  */
-.description {
+.tooltip {
   border:1px solid #e3e3e3;
   color: #fff;
   display: flex;
-  background: rgba(0,0,0,.75); 
+  background: rgba(0,0,0,1); 
   border-radius: 3px;
   font-size: 14px;
   padding: 6px 10px;
   top: 130%;
   left: 0;
-  /* white-space: pre-wrap; */
+  z-index: 1;
   position: absolute;
 }
 
@@ -255,9 +254,9 @@ ul {
 
 
 /* the triangle */
-.description:after {
+.tooltip:after {
   border-right: 6px solid transparent;
-	border-bottom: 6px solid rgba(0,0,0,.75); 
+	border-bottom: 6px solid rgba(0,0,0,1); 
   border-left: 6px solid transparent;
   height: 0;
   content: '';
@@ -267,31 +266,30 @@ ul {
 }
 
 
-
 /* deals with tooltip action */
-.tiptext > .description:after, .description:before {
+.tiptext > .tooltip:after, .tooltip:before {
 	visibility:hidden;
 	opacity:0;
   transform: translate3d(0,-10px,0);
-  transition: all .15s ease-in-out;
+  transition: all .06s ease-in-out;
 }
 
-.tiptext:hover > .description:after, .description:before {
+.tiptext:hover > .tooltip:after, .tooltip:before {
 	visibility:visible;
 	opacity:1;
   transform: translate3d(0,0,0);
 	transition-delay:0.15s;
-  transition: all .15s ease-in-out;
+  transition: all .06s ease-in-out;
 }
 
-.tiptext > .description {
+.tiptext > .tooltip {
 	visibility:hidden;
 	opacity:0;
   transform: translate3d(0,-10px,0);
   transition: all .15s ease-in-out;
 }
 
-.tiptext:hover > .description {
+.tiptext:hover > .tooltip {
 	visibility:visible;
 	opacity:1;
   transform: translate3d(0,0,0);
