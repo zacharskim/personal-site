@@ -1,0 +1,300 @@
+
+:root {
+  --hover-color: #D3D3D3; /* default value */
+}
+
+#container{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  padding-left: 0px;
+}
+
+nav li {
+  margin-right: 10px;
+}
+
+
+#dark-mode{
+  margin-right: 10px;
+}
+
+
+.light-mode {
+  background-color: white;
+  color: black !important;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white !important;
+}
+
+.dark{
+  background: black;
+  color:  white;
+}
+
+.light{
+  background: white;
+  color:  black;
+}
+
+
+#body-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 50%;
+  justify-content: flex-start;
+  align-items: center;
+  height: auto; /* remove the height */
+
+}
+
+
+.nav-container{
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.theme-button {
+  background-color: transparent;
+  border: none;
+  border-radius: 4px;
+  padding: 4px;
+  height: 25px;
+  align-self: center;
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+
+.theme-button:hover {
+  background-color: var(--hover-color);
+}
+
+.btn {
+  background: gainsboro;
+  padding: 0px 12px 0px;
+  cursor: pointer;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  border-radius: 6px;
+  font-weight: 550;
+  border: none;
+  height: 40px; 
+  align-self: center;
+}
+
+.btn:hover{
+  background-color: lightgray;
+}
+
+.text{
+  width: 350px;
+ 
+}
+
+.callout{
+  margin-top: 40px;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px #759243;
+}
+
+
+
+a:visited { 
+  text-decoration: none; 
+  color: orange; 
+ }
+
+
+a:focus { text-decoration: none; color:orange; }
+a:active { text-decoration: none; color:teal; }
+
+#posts ul {
+  list-style: none; /* remove the bullet points */
+  padding: 0; /* remove the default padding */
+  margin: 0; /* remove the default margin */
+}
+
+#posts li {
+  display: flex; /* use flexbox to align the elements horizontally */
+  align-items: center; /* center the elements vertically */
+  margin-bottom: 10px; /* add some margin to the bottom of each list item */
+}
+
+.date {
+  width: 120px; /* set a fixed width for the date */
+  font-weight: bold; /* make the date bold */
+  margin-right: 10px; /* add some margin to the right of the date */
+}
+
+.separator {
+  margin: 0 10px; /* add some margin to the separator */
+}
+
+a {
+  flex-grow: 1; /* make the link take up the remaining space in the list item */
+  text-decoration: none; /* remove the underline from the link */
+  color: black; /* set the link color to black */
+}
+
+
+@media screen and (max-width: 415px) {
+  #body-container {
+    width: 300px !important;
+  }
+
+  .text {
+    width: 260px !important;
+  }
+
+}
+
+
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  background: gainsboro;
+  padding: 0px 12px 0px 12px;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 6px;
+  border: none;
+  height: 40px; 
+  align-self: center;
+  height: 24px;
+}
+
+.logo-link:hover{
+  background-color: lightgray;
+}
+
+.logo-link i {
+  margin-right: 10px;
+}
+
+.links{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 385px;
+}
+
+
+ul {
+  list-style-type: none;
+}
+
+.proj-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+  padding-left: 0px;
+  align-items: center;
+  gap: 6px;
+}
+
+
+.tips li {
+  cursor: pointer; 
+  display: inline-block; 
+  padding: 0 10px;
+}
+
+
+
+.tiptext {
+  position: relative;
+}
+
+
+/* the solid block of tool tip  */
+.description {
+  border:1px solid #e3e3e3;
+  color: #fff;
+  display: flex;
+  background: rgba(0,0,0,.75); 
+  border-radius: 3px;
+  font-size: 14px;
+  padding: 6px 10px;
+  top: 130%;
+  left: 0;
+  /* white-space: pre-wrap; */
+  position: absolute;
+}
+
+/* maybe remove font and padding stuff so that it can be dealt with in subclasses? */
+
+
+/* the triangle */
+.description:after {
+  border-right: 6px solid transparent;
+	border-bottom: 6px solid rgba(0,0,0,.75); 
+  border-left: 6px solid transparent;
+  height: 0;
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 12px;
+}
+
+
+
+/* deals with tooltip action */
+.tiptext > .description:after, .description:before {
+	visibility:hidden;
+	opacity:0;
+  transform: translate3d(0,-10px,0);
+  transition: all .15s ease-in-out;
+}
+
+.tiptext:hover > .description:after, .description:before {
+	visibility:visible;
+	opacity:1;
+  transform: translate3d(0,0,0);
+	transition-delay:0.15s;
+  transition: all .15s ease-in-out;
+}
+
+.tiptext > .description {
+	visibility:hidden;
+	opacity:0;
+  transform: translate3d(0,-10px,0);
+  transition: all .15s ease-in-out;
+}
+
+.tiptext:hover > .description {
+	visibility:visible;
+	opacity:1;
+  transform: translate3d(0,0,0);
+	transition-delay:0.15s;
+  transition: all .15s ease-in-out;
+}
