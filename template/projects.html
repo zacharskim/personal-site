@@ -7,14 +7,18 @@
     </head>
 
   
-  <body id="body-container" class="light"> 
-    <h2>Matt Zacharski</h2>
-
-    <div class="nav-container">
-      {{navbar}}
-      <button id="dark-mode" class="light-mode theme-button" ><i class="fa-solid fa-circle-half-stroke"></i></button>
-      <button class="btn"> theme </button>
-    </div>
+    <body> 
+      <div id="container-div" class="body-container light">
+        
+          <div class="nav-container"> 
+            <h2>Matt Zacharski</h2> 
+     
+            <div class="header-container">
+            {{navbar}} 
+            <button id="dark-mode" class="light-mode theme-button" ><i class="fa-solid fa-circle-half-stroke"></i></button>
+            <!-- <button id="theme-btn" class="btn"> theme </button> -->
+            </div>
+          </div>   
 
     <div>
       <ul class="proj-container">
@@ -53,8 +57,8 @@
       </ul> 
     </div>  -->
      
- 
+      </div>
   </body>
-  <script type="text/javascript" src="./main.js"></script>
+  <script type="module" src="./main.js"></script>
  
 </html> 

@@ -7,20 +7,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
     </head>
-    <body id="body-container" class="light"> 
-        <h2>Matt Zacharski</h2>
-        <div class="nav-container">
-          <p><nav>
+    <body> 
+      <div id="container-div" class="body-container light">
+        
+        <div class="nav-container"> 
+          <h2>Matt Zacharski</h2> 
+   
+          <div class="header-container">
+          <p><!-- .html is needed in dev env -->
+  <nav>
       <ul>
         <li><a href="./index.html">Home</a></li>
         <li><a href="./projects.html">Projects</a></li>
         <li><a href="./posts.html">Posts</a></li>
       </ul>
-  </nav>  </p>
-  
-        <button id="dark-mode" class="light-mode theme-button" ><i class="fa-solid fa-circle-half-stroke"></i></button>
-        <button class="btn"> theme </button>
-        </div> 
+  </nav>    </p>
+ 
+          <button id="dark-mode" class="light-mode theme-button" ><i class="fa-solid fa-circle-half-stroke"></i></button>
+          <!-- <button id="theme-btn" class="btn"> theme </button> -->
+          </div>
+        </div>  
   
         <!-- set new css styles for post contents etc -->
         <h1>What's the big deal with Matrix Multiplication?</h1>
@@ -38,12 +44,13 @@
 <p>So don't let the fancy symbols and big words fool you. Matrix multiplication is just regular multiplication with matrices. It's nothing to be scared of.</p>
 
 <p>And that's the big deal with matrix multiplication.</p>
-    
-      </body>                    
-            
-       
+   
+        </div> 
+      </body>                      
+               
+        
         
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script type="text/javascript" src="./main.js"></script>
-</html>         
+<script type="module" src="./main.js"></script>
+</html>          

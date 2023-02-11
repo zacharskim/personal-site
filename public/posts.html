@@ -7,27 +7,34 @@
          <title>Infinite Monkey Biz</title>
     </head>
   
-  <body id="body-container" class="light"> 
-    <h2>Matt Zacharski</h2>
- 
-    <div class="nav-container">
-      <p><nav>
+    <body> 
+      <div id="container-div" class="body-container light">
+        
+          <div class="nav-container"> 
+            <h2>Matt Zacharski</h2> 
+     
+            <div class="header-container">
+            <p><!-- .html is needed in dev env -->
+  <nav>
       <ul>
         <li><a href="./index.html">Home</a></li>
         <li><a href="./projects.html">Projects</a></li>
         <li><a href="./posts.html">Posts</a></li>
       </ul>
-  </nav>  </p>
+  </nav>    </p>
+ 
+            <button id="dark-mode" class="light-mode theme-button" ><i class="fa-solid fa-circle-half-stroke"></i></button>
+            <!-- <button id="theme-btn" class="btn"> theme </button> -->
+            </div>
+          </div>   
 
-      <button id="dark-mode" class="light-mode theme-button" ><i class="fa-solid fa-circle-half-stroke"></i></button>
-      <button class="btn"> theme </button>
-    </div>
-    <div>   
+
+    <div>     
       <ul class="posts">     
         <li>   
           <span class="date">1-24-2023</span>
           <a href="./post3.html">What's the big deal with Matrix Multiplication?</a>
-        </li> 
+        </li>  
         <li>   
           <span class="date">1-23-2023</span>
           <a href="./post2.html">My Favorite Regressions</a>
@@ -38,8 +45,9 @@
         </li>
       </ul>
   </div>
-  </body>
+      </div>
+  </body> 
 
-  <script type="text/javascript" src="./main.js"></script>
+  <script type="module" src="./main.js"></script>
 
 </html>    

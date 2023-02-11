@@ -1,6 +1,9 @@
 
 :root {
-  --hover-color: #D3D3D3; /* default value */
+  --hover-color: #d3d3d3d2; /* default value */
+  --text-color: #d3d3d3d2; /* default value */
+  --background-color: #d3d3d3d2; /* default value */
+  --callout-color: #d3d3d3d2; /* default value */
 }
 
 #container{
@@ -10,8 +13,13 @@
 }
 
 body {
-  font-family: "Helvetica Neue", Arial, sans-serif;;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  /* background-color: var(--background-color); */
+  background-color: #ebebeb;
+  margin: 0px;
 }
+
+
 
 nav {
   display: flex;
@@ -36,43 +44,52 @@ nav li {
 }
 
 
+
 .light-mode {
-  background-color: white;
-  color: black !important;
+  background-color: #ebebeb;
+  color: #333333 !important;
 }
 
 .dark-mode {
-  background-color: black;
-  color: white !important;
+  background-color: #161618;
+  color: #ecedee !important;
 }
 
 .dark{
-  background: black;
-  color:  white;
+  background: #161618;
+  color:  #ecedee;
 }
 
 .light{
-  background: white;
-  color:  black;
+  background: #ebebeb;
+  color:  #333333;
 }
 
 
-#body-container {
+.body-container {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  width: 50%;
-  justify-content: flex-start;
-  align-items: center;
-  height: auto; /* remove the height */
-
+  width: 100%;
+  align-items: center; /* change to center */
+  height: 100%; /* set height to 100% */
 }
 
+.header-container{
+  display: flex;
+  flex-direction: 'row';
+  align-items: center;
+  gap: '18px';
+  margin-right: 14px;
+}
 
 .nav-container{
   display: flex;
   flex-direction: row;
-  
+  margin-left: 28px;
+  width: 100%;
+  justify-content: space-between;
+
 }
 
 .theme-button {
@@ -108,30 +125,34 @@ nav li {
   background-color: lightgray;
 }
 
-.text{
-  width: 350px;
- 
-}
+
 
 .callout{
   margin-top: 40px;
-  background-color: #f5f5f5;
+  /* background-color: var(--callout-color); */
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 2px 2px 10px #759243;
+  width: 40%;
+  min-width: 350px;
+  /* color: var(--text-color); */
+  /* box-shadow: 2px 2px 10px var(--text-color); */
+  box-shadow: 2px 2px 10px #5e4017;
 }
 
 
 
 a:visited { 
   text-decoration: none; 
-  color: orange; 
+  /* color: var(--callout-color); */
+  
  }
 
 
-a:hover { text-decoration: none; color:green; }
-a:active { text-decoration: none; color:teal; }
+/* a:hover { text-decoration: none; color:var(--callout-color); }
+a:active { text-decoration: none; color: var(--callout-color); } */
 
+a:hover { text-decoration: none; color: #3158D6; }
+a:active { text-decoration: none; }
 
 
 
@@ -148,6 +169,7 @@ a:active { text-decoration: none; color:teal; }
 .date {
   font-weight: bold;
   margin-right: 16px;
+  /* color: var(--text-color); */
 }
 
 
@@ -155,12 +177,13 @@ a:active { text-decoration: none; color:teal; }
 a {
   flex-grow: 1; /* make the link take up the remaining space in the list item */
   text-decoration: none; /* remove the underline from the link */
-  color: black; /* set the link color to black */
+  /* color: var(--text-color);  */
+  color: #85b857;
 }
 
 
 @media screen and (max-width: 415px) {
-  #body-container {
+  .body-container {
     width: 300px !important;
   }
 
@@ -201,8 +224,9 @@ a {
   margin-top: 40px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  width: 385px;
+  gap: 18px;
+  justify-content: space-between;
+  
 }
 
 

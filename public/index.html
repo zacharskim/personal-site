@@ -7,22 +7,30 @@
          <title class="title">Infinite Monkey Biz</title>
     </head>
    
-  <body id="body-container" class="light"> 
-    <h2>Matt Zacharski</h2> 
+  <body> 
+    <div id="container-div" class="body-container light">
+      
+        <div class="nav-container"> 
+          <h2>Matt Zacharski</h2>  
     
-    <div class="nav-container"> 
-      <p><nav>
+          <div class="header-container">
+          <p><!-- .html is needed in dev env -->
+  <nav>
       <ul>
-        <li><a href="./index">Home</a></li>
-        <li><a href="./projects">Projects</a></li>
-        <li><a href="./posts">Posts</a></li>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./projects.html">Projects</a></li>
+        <li><a href="./posts.html">Posts</a></li>
       </ul>
-  </nav>   </p>
+  </nav>    </p>
  
-      <button id="dark-mode" class="light-mode theme-button" ><i class="fa-solid fa-circle-half-stroke"></i></button>
-      <button class="btn"> theme </button>
-    </div> 
-    <div class="text callout"> 
+          <button id="dark-mode" class="light-mode theme-button" ><i class="fa-solid fa-circle-half-stroke"></i></button>
+          <!-- <button id="theme-btn" class="btn"> theme </button> -->
+          </div>
+        </div>    
+ 
+   
+
+    <div class="callout">  
       <p>Hey, I'm Matt</p>    
       <p>  
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
@@ -36,10 +44,10 @@
     </div>
 
     <div class="links"> 
-      
+       
       <a href="https://github.com/zacharskim"  target="_blank">
         <button class="logo-link"><i class="fa-brands fa-github"></i> github</button>
-      </a>
+      </a> 
       
       <a href="https://www.linkedin.com/in/matt-zacharski-93758a155/"  target="_blank">
         <button class="logo-link"><i class="fa-brands fa-linkedin"></i> linkedin</button>
@@ -52,6 +60,7 @@
     </div>
     <!-- <div class="rc-scout"></div>
     <script async defer src="https://www.recurse-scout.com/loader.js?t=35efec8996c8ab5a5fd73a6c6f786456"></script> -->
+    </div>
   </body>
-  <script type="text/javascript" src="./main.js"></script>
-</html> 
+  <script type="module" src="./main.js"></script>
+</html>  
