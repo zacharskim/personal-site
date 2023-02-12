@@ -37,7 +37,9 @@ if (theme === 'dark') {
   darkMode.classList.remove('light-mode');
   body_el.classList.remove('light');
   body_el.classList.add('dark');
-}
+  document.documentElement.style.setProperty("--background-color", "#161618");
+
+} 
 
 darkMode.addEventListener("click", function() {
 darkMode.classList.toggle("light-mode");
@@ -45,13 +47,26 @@ darkMode.classList.toggle("dark-mode");
 body_el.classList.toggle("light");
 body_el.classList.toggle("dark");
 
+
 // Save the state of the theme to local storage
 if (body_el.classList.contains('dark')) {
 localStorage.setItem('theme', 'dark');
+
+var tooltips = document.querySelectorAll('.tooltip');
+for (var i = 0; i < tooltips.length; i++) {
+  tooltips[i].classList.add('tooltip-dark');
+}
+
 } else {
 localStorage.removeItem('theme');
+var tooltips = document.querySelectorAll('.tooltip');
+  for (var i = 0; i < tooltips.length; i++) {
+    tooltips[i].classList.remove('tooltip-dark');
+  }
+  document.documentElement.style.setProperty("--background-color", "#ecedee");
 }
 });
+
 
 
 

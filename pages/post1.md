@@ -15,10 +15,15 @@ But just how likely is it that the monkeys would actually type out Shakespeare's
 $$P = \frac{s}{k^n}$$
 
 Where:
-- P is the probability of the event occurring
-- s is the number of successful outcomes
-- k is the number of possible outcomes for each trial
-- n is the number of trials
+
+* P is the probability of the event occurring
+* s is the number of successful outcomes
+* k is the number of possible outcomes for each trial
+* n is the number of trials
+
+
+![image info](https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Colorado_in_United_States.svg/640px-Colorado_in_United_States.svg.png)
+ 
 
 In this case, the number of possible outcomes for each trial (k) is the number of characters on a typewriter keyboard (around 50-60, including letters, numbers, and symbols). The number of trials (n) is the number of characters in the complete works of Shakespeare (around 884,647).
 

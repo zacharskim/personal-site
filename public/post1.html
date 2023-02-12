@@ -5,14 +5,17 @@
         <script src="https://kit.fontawesome.com/bcb11ebc53.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="./styles/app.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/atom-one-dark.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 
-    </head> 
-    <body> 
-      <div id="container-div" class="body-container light">
-        
+    </head>   
+    <body>    
+      <div id="container-div" class="body-container auto-height light">
+           
         <div class="nav-container"> 
           <h2>Matt Zacharski</h2> 
-   
+       
           <div class="header-container">
           <p><!-- .html is needed in dev env -->
   <nav>
@@ -25,11 +28,13 @@
  
           <button id="dark-mode" class="light-mode theme-button" ><i class="fa-solid fa-circle-half-stroke"></i></button>
           <!-- <button id="theme-btn" class="btn"> theme </button> -->
-          </div>
-        </div>    
-       
+          </div> 
+        </div>      
+        
         <!-- set new css styles for post contents etc -->
-        <h1>The Infinite Monkey Theorem: The Odds of Randomness</h1>
+        
+          <div class="post">
+            <h1>The Infinite Monkey Theorem: The Odds of Randomness</h1>
 
 <h5>Published 1-23-23 | Last Update 1-23-23</h5>
 
@@ -41,11 +46,16 @@
 
 <p>$$P = \frac{s}{k^n}$$</p>
 
-<p>Where:
-- P is the probability of the event occurring
-- s is the number of successful outcomes
-- k is the number of possible outcomes for each trial
-- n is the number of trials</p>
+<p>Where:</p>
+
+<ul>
+<li>P is the probability of the event occurring</li>
+<li>s is the number of successful outcomes</li>
+<li>k is the number of possible outcomes for each trial</li>
+<li>n is the number of trials</li>
+</ul>
+
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Colorado_in_United_States.svg/640px-Colorado_in_United_States.svg.png" alt="image info" /></p>
 
 <p>In this case, the number of possible outcomes for each trial (k) is the number of characters on a typewriter keyboard (around 50-60, including letters, numbers, and symbols). The number of trials (n) is the number of characters in the complete works of Shakespeare (around 884,647).</p>
 
@@ -62,9 +72,10 @@
 <pre><code>print("hello world")
 x = 4 + 5
 </code></pre>
-    
+
+          </div>    
         </div>   
-      </body>                          
+      </body>                           
             
        
      

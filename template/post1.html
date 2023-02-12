@@ -5,25 +5,31 @@
         <script src="https://kit.fontawesome.com/bcb11ebc53.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="./styles/app.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/atom-one-dark.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 
-    </head> 
-    <body> 
-      <div id="container-div" class="body-container light">
-        
+    </head>   
+    <body>    
+      <div id="container-div" class="body-container auto-height light">
+           
         <div class="nav-container"> 
           <h2>Matt Zacharski</h2> 
-   
+       
           <div class="header-container">
           {{navbar}} 
           <button id="dark-mode" class="light-mode theme-button" ><i class="fa-solid fa-circle-half-stroke"></i></button>
           <!-- <button id="theme-btn" class="btn"> theme </button> -->
-          </div>
-        </div>    
-       
+          </div> 
+        </div>      
+        
         <!-- set new css styles for post contents etc -->
-        {{post1}}    
+        
+          <div class="post">
+            {{post1}}
+          </div>    
         </div>   
-      </body>                          
+      </body>                           
             
        
      
