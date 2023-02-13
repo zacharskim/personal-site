@@ -160,11 +160,11 @@ a:visited {
  }
 
 
-/* a:hover { text-decoration: none; color:var(--callout-color); }
-a:active { text-decoration: none; color: var(--callout-color); } */
+/* a:hover { text-decoration: none; color:var(--callout-color); } */
+/* a:active { text-decoration: none; color: red; } */
 
 a:hover { text-decoration: none; color: #3158D6; }
-a:active { text-decoration: none; }
+a:active { text-decoration: none; color: #3158D6; }
 
 
 
@@ -176,6 +176,7 @@ a:active { text-decoration: none; }
   padding-left: 0px;
   margin-top: 40px;
   gap: 6px;
+  list-style-type: none;
 }
 
 .post {
@@ -211,6 +212,13 @@ a {
 @media screen and (max-width: 415px) {
   .body-container {
     width: 300px !important;
+  }
+
+  .post{
+    text-align: center;
+    width: 90%;
+    height: auto;
+
   }
 
   .text {

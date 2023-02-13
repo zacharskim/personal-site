@@ -33,12 +33,18 @@ var body_el = document.getElementById("container-div")
 // Check local storage for the theme state
 var theme = localStorage.getItem('theme');
 if (theme === 'dark') {
+  console.log("well...dark mode etc...");
   darkMode.classList.add('dark-mode');
   darkMode.classList.remove('light-mode');
   body_el.classList.remove('light');
   body_el.classList.add('dark');
   document.documentElement.style.setProperty("--background-color", "#161618");
 
+  var tooltips = document.querySelectorAll('.tooltip');
+  for (var i = 0; i < tooltips.length; i++) {
+    tooltips[i].classList.add('tooltip-dark');
+  }
+ 
 } 
 
 darkMode.addEventListener("click", function() {
@@ -56,6 +62,7 @@ var tooltips = document.querySelectorAll('.tooltip');
 for (var i = 0; i < tooltips.length; i++) {
   tooltips[i].classList.add('tooltip-dark');
 }
+document.documentElement.style.setProperty("--background-color", "#161618");
 
 } else {
 localStorage.removeItem('theme');
