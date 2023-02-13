@@ -23,6 +23,17 @@
 // const combos = await getCombos();
 // console.log(combos);
 
+const currentPage = window.location.pathname;
+const links = document.querySelectorAll("nav a");
+
+links.forEach(link => {
+  const href = link.getAttribute("href");
+  console.log(currentPage, href, link);
+  if (currentPage.endsWith(href)) {
+    link.classList.add("active");
+  }
+});
+
 
 
 //js for dark and light modes...

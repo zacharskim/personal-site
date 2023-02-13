@@ -43,12 +43,20 @@ nav li {
   margin-right: 10px;
 }
 
+.active {
+  color: #3158D6;
+ 
+}
 
 #dark-mode{
   margin-right: 10px;
 }
 
-
+#scout{
+  margin-top: 40px;
+  width: 50px;
+  height: 62.5px;  
+}
 
 .light-mode {
   background-color: #ebebeb;
@@ -99,7 +107,6 @@ nav li {
   padding-left: 8%;
   width: 100%;
   justify-content: space-between;
-
 }
 
 
@@ -141,13 +148,10 @@ nav li {
 
 .callout{
   margin-top: 40px;
-  /* background-color: var(--callout-color); */
   padding: 20px;
   border-radius: 5px;
   width: 40%;
   min-width: 350px;
-  /* color: var(--text-color); */
-  /* box-shadow: 2px 2px 10px var(--text-color); */
   box-shadow: 2px 2px 10px #5e4017;
 }
 
@@ -209,24 +213,42 @@ a {
 }
 
 
-@media screen and (max-width: 415px) {
-  .body-container {
-    width: 300px !important;
+@media (max-width: 767px) {
+  .nav-container h2 {
+    font-size: 1.17em;
+    color: #5e4017;
+  }
+  .nav-container{
+    max-width: 300px;
+    gap: 20px;
+    margin: 0 auto;
+    padding-left: 4%;
+  }
+
+  .callout{
+    min-width: 0px;
+    width: 65%;
+  }
+
+  .links{
+    gap: 9px !important;
+    width: fit-content;
+  }
+
+  .body-container{
+    overflow-x: hidden;
   }
 
   .post{
-    text-align: center;
-    width: 90%;
-    height: auto;
-
+    width: 80%;
   }
 
-  .text {
-    width: 260px !important;
+  .date{
+    display: block;
+    margin-bottom: 10px;
   }
 
 }
-
 
 
 .logo-link {
@@ -246,9 +268,9 @@ a {
   height: 24px;
 }
 
-/* .logo-link:hover{
+.logo-link:hover{
   background-color: lightgray;
-} */
+}
 
 .logo-link i {
   margin-right: 10px;
@@ -340,11 +362,7 @@ a {
   padding-right: 12px;
 }
 
-
-
 /* maybe remove font and padding stuff so that it can be dealt with in subclasses? */
-
-
 /* the triangle */
 .tooltip:after {
   border-right: 6px solid transparent;
@@ -386,7 +404,7 @@ a {
   transition: all .35s ease-in-out;
 }
 
-.tiptext  .tooltip {
+.tiptext .tooltip {
 	visibility:hidden;
 	opacity:0;
   transform: translate3d(0,12px,0);
@@ -394,7 +412,7 @@ a {
   transition-delay:.85s;
 }
 
-.tiptext:hover  .tooltip {
+.tiptext:hover .tooltip {
 	visibility:visible;
 	opacity:1;
   transform: translate3d(0,0,0);
