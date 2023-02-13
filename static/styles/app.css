@@ -213,44 +213,6 @@ a {
 }
 
 
-@media (max-width: 767px) {
-  .nav-container h2 {
-    font-size: 1.17em;
-    color: #5e4017;
-  }
-  .nav-container{
-    max-width: 300px;
-    gap: 20px;
-    margin: 0 auto;
-    padding-left: 4%;
-  }
-
-  .callout{
-    min-width: 0px;
-    width: 65%;
-  }
-
-  .links{
-    gap: 9px !important;
-    width: fit-content;
-  }
-
-  .body-container{
-    overflow-x: hidden;
-  }
-
-  .post{
-    width: 80%;
-  }
-
-  .date{
-    display: block;
-    margin-bottom: 10px;
-  }
-
-}
-
-
 .logo-link {
   display: flex;
   align-items: center;
@@ -266,6 +228,7 @@ a {
   height: 40px; 
   align-self: center;
   height: 24px;
+  color: #333333;
 }
 
 .logo-link:hover{
@@ -419,3 +382,68 @@ a {
   transition: all .35s ease-in-out;
 
 }
+
+
+
+@media (max-width: 767px) {
+  .nav-container h2 {
+    font-size: 1.17em;
+  }
+  .nav-container{
+    max-width: 300px;
+    gap: 20px;
+    margin: 0 auto;
+    padding-left: 0%;
+  }
+
+  .callout{
+    min-width: 0px;
+    width: 65%;
+  }
+
+  .links{
+    gap: 9px !important;
+    width: fit-content;
+  }
+
+  .body-container{
+    overflow-x: hidden;
+  }
+
+  .post{
+    width: 80%;
+  }
+
+  .proj-container {
+    height: auto;
+    gap: 12px;
+
+  }
+
+  .date{
+    display: block;
+    margin-bottom: 6px;
+    margin-top: 12px;
+  }
+
+  .posts{
+    height: auto;
+  };
+
+  .posts li {
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-container i {
+    font-size: large;
+  }
+
+  .tooltip:after{
+    left: 150px;
+  }
+
+  .tooltip {
+    left: -138;
+  }
+} 
