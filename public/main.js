@@ -28,7 +28,7 @@ const links = document.querySelectorAll("nav a");
 
 links.forEach(link => {
   const href = link.getAttribute("href");
-  console.log(currentPage, href, link);
+  
   if (currentPage.endsWith(href)) {
     link.classList.add("active");
   }
@@ -44,7 +44,6 @@ var body_el = document.getElementById("container-div")
 // Check local storage for the theme state
 var theme = localStorage.getItem('theme');
 if (theme === 'dark') {
-  console.log("well...dark mode etc...");
   darkMode.classList.add('dark-mode');
   darkMode.classList.remove('light-mode');
   body_el.classList.remove('light');
@@ -86,6 +85,59 @@ var tooltips = document.querySelectorAll('.tooltip');
 });
 
 
+var tiptextEl = document.getElementById('welp')
+
+body_el.addEventListener('touchstart', function(){
+  console.log(tiptextEl.style.visibility);  
+
+
+
+});
+
+
+
+//prolly will need an active class and some sort of id system or something...
+
+/* deals with tooltip action */
+// .tiptext  .tooltip:after, .tooltip:before {
+// 	visibility:hidden;
+// 	opacity:0;
+//   transform: translate3d(0,12px,0);
+//   transition: all .35s ease-in-out;
+//   transition-delay:.85s;
+// }
+
+// .tiptext:hover  .tooltip:after, .tooltip:before {
+// 	visibility:visible;
+// 	opacity:1;
+//   transform: translate3d(0,0,0);
+//   transition: all .35s ease-in-out;
+// }
+
+// .tiptext .tooltip {
+// 	visibility:hidden;
+// 	opacity:0;
+//   transform: translate3d(0,12px,0);
+//   transition: all .35s ease-in-out;
+//   transition-delay:.85s;
+// }
+
+// .tiptext:hover .tooltip {
+// 	visibility:visible;
+// 	opacity:1;
+//   transform: translate3d(0,0,0);
+//   transition: all .35s ease-in-out;
+
+// }
+
+
+// going to work like this
+// on mobile tapping on the playpoint will trigger the tooltip 
+// tapping elsewhere will cause it to go away and hide...
+
+// how that happens
+//determine what triggers the visible vs inviisible
+//then just edit that shit, the hover is kinda irrlevant...
 
 
 // function setTheme(theme) {
