@@ -85,6 +85,12 @@ var tooltips = document.querySelectorAll('.tooltip');
 });
 
 
+var tiptextEl = document.getElementById('welp')
+
+body_el.addEventListener('touchstart', function(){
+  console.log('might have mattered??');  
+});
+
 
 
 if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Mac') != -1 && navigator.userAgent.indexOf('Version') != -1) {
