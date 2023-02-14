@@ -23,6 +23,9 @@
 // const combos = await getCombos();
 // console.log(combos);
 
+
+document.body.firstElementChild.tabIndex = 1
+
 const currentPage = window.location.pathname;
 const links = document.querySelectorAll("nav a");
 
@@ -89,9 +92,6 @@ var tiptextEl = document.getElementById('welp')
 
 body_el.addEventListener('touchstart', function(){
   console.log('might have mattered??');  
-
-
-
 });
 
 
