@@ -113,6 +113,10 @@ if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('
   
 }
 
+if (navigator.userAgent.match(/iPhone/i) && navigator.userAgent.match(/Safari/i)) {
+  // The user is using an iPhone with Safari
+  body_el.style.cursor = 'pointer'
+} 
 
 
 //prolly will need an active class and some sort of id system or something...
