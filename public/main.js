@@ -112,10 +112,11 @@ if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('
   }
   
 }
-
+console.log("could run??");
 if (navigator.userAgent.match(/iPhone/i) && navigator.userAgent.match(/Safari/i)) {
   // The user is using an iPhone with Safari
   body_el.style.cursor = 'pointer'
+
 } 
 
 
