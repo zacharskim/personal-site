@@ -85,14 +85,24 @@ var tooltips = document.querySelectorAll('.tooltip');
 });
 
 
-var tiptextEl = document.getElementById('welp')
-
-body_el.addEventListener('touchstart', function(){
-  console.log(tiptextEl.style.visibility);  
 
 
+if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Mac') != -1 && navigator.userAgent.indexOf('Version') != -1) {
 
-});
+  var posts = document.getElementsByClassName("posts");
+  var projs = document.getElementsByClassName('proj-container');
+  
+  if(posts[0]){
+    posts[0].style.height = 'auto';
+    posts[0].style.gap = '12px'
+  }
+
+  if(projs[0]){
+    projs[0].style.height = 'auto';  
+    projs[0].style.gap = '12px'
+  }
+  
+}
 
 
 
