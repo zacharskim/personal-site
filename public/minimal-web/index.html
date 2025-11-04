@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>The Case for Minimal Web Design | MATT←MONKEY BIZ</title>
+	<meta name="description" content="Powering the web one pedal at a time">
+	<meta name="author" content="Matt">
+
+	<link rel="icon" href="//localhost:1313/icons/sun.svg">
+
+	
+	<link rel="stylesheet" href="//localhost:1313/css/style.css"><meta property="og:title" content="The Case for Minimal Web Design" />
+<meta name="twitter:title" content="The Case for Minimal Web Design"/>
+
+<meta property="og:description" content="Modern websites are bloated with megabytes of JavaScript. What if we went back to basics?" />
+
+<meta name="twitter:description" content="Modern websites are bloated with megabytes of JavaScript. What if we went back to basics?"/>
+
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//localhost:1313/minimal-web/" />
+
+<meta property="og:image" content="//localhost:1313/icons/sun.svg" />
+<meta property="og:image:secure_url" content="//localhost:1313/icons/sun.svg" />
+<meta property="og:image:type" content="image/svg+xml">
+<meta property="og:image:width" content="300" />
+<meta property="og:image:height" content="300" />
+<meta name="twitter:card" content="summary"/><meta property="article:section" content="" />
+<meta property="article:published_time" content="2024-12-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-12-20T00:00:00+00:00" /><meta property="og:site_name" content="MATT←MONKEY BIZ" />
+
+
+<meta property="article:author" content="Matt Zacharski" />
+<meta name="citation_author" content="Matt Zacharski">
+
+
+<meta property="article:tag" content="web design" />
+<meta property="article:tag" content="minimalism" />
+<meta property="article:tag" content="performance" />
+</head>
+<body id="the-case-for-minimal-web-design">
+	<div class="battery_bg">
+	<div id="battery_data" class="bat_status" data-charging="no">
+	  <a href="//localhost:1313/power/" title="Power">
+	    <span id="charge_icon">
+	      <svg class="icon battery-svg" viewBox="0 0 500 500"><title>Battery used</title><polygon class="svg_stroke" points="327.01 127.16 327.01 47.31 172.99 47.31 172.99 127.16 115.52 127.16 115.52 452.69 384.48 452.69 384.48 127.16 327.01 127.16"/><polygon class="svg_fill" points="357.64 408.86 158.26 408.86 158.26 209.49 357.64 408.86"/></svg>
+	      
+	      <svg class="icon sun-svg" viewBox="0 0 500 500"><title>Battery charging</title><circle class="svg_fill" cx="248.48" cy="252.55" r="97.03"/><rect class="svg_fill" x="234.53" y="17.45" width="27.9" height="112.39"/><rect class="svg_fill" x="234.53" y="375.25" width="27.9" height="112.39"/><rect class="svg_fill" x="413.42" y="196.35" width="27.9" height="112.39" transform="translate(679.92 -174.83) rotate(90)"/><rect class="svg_fill" x="55.63" y="196.35" width="27.9" height="112.39" transform="translate(322.12 182.97) rotate(90)"/><rect class="svg_fill" x="361.03" y="69.85" width="27.9" height="112.39" transform="translate(198.96 -228.23) rotate(45)"/><rect class="svg_fill" x="108.03" y="322.85" width="27.9" height="112.39" transform="translate(303.75 24.77) rotate(45)"/><rect class="svg_fill" x="361.03" y="322.85" width="27.9" height="112.39" transform="translate(908.15 381.93) rotate(135)"/><rect class="svg_fill" x="108.03" y="69.85" width="27.9" height="112.39" transform="translate(297.35 128.93) rotate(135)"/></svg>
+	    </span>
+	    <span id="level"></span></a>
+	</div>
+	<div id="battery">
+	</div>
+</div>
+	<header class="site-header">
+  <h1><a id="top" href="//localhost:1313/">MATT←MONKEY BIZ</a></h1>
+  <div class="subtitle">
+     <a href="//localhost:1313/generator">Powering the web one pedal at a time
+    </a>
+  </div>
+  <nav id="menu">
+    <div id="menu-s">
+        <span id="m-btn">menu</span>
+    </div>
+    <ul id="menu-list">
+     
+         
+        <li class="">
+            <a href=" /about/ " data-nav="about" >
+                <span>About</span>
+            </a>
+        </li>
+        
+        <li class="">
+            <a href=" /blog/ " data-nav="blog" >
+                <span>Blog</span>
+            </a>
+        </li>
+        
+        <li class="">
+            <a href=" /projects/ " data-nav="projects" >
+                <span>Projects</span>
+            </a>
+        </li>
+        
+        <li class="">
+            <a href=" /generator/ " data-nav="generator" >
+                <span>Generator</span>
+            </a>
+        </li>
+        
+        <li class="">
+            <a href=" /archives/ " data-nav="archive" >
+                <span>Archive</span>
+            </a>
+        </li>
+        
+        <li class="rss">
+            <a href='' target="_blank"><svg viewBox="0 0 80 80" class="icon"><title>Newsletter</title><path d="M4.95,13.14v55H74.33v-55Zm54.34,8.12L39.64,39.74,20,21.26ZM13.07,60V25.91l26.56,25,26.57-25V60Z"/></svg></a>
+            <a href="/feeds" type="application/atom+xml" rel="alternate" target="_blank"><svg viewBox="0 0 80 80" class="icon"><title>RSS Feed</title><circle cx="19.91" cy="58.23" r="6.86"/><path d="M67.89,65.72H55.7A41.86,41.86,0,0,0,13.89,23.91V11.73A54.06,54.06,0,0,1,67.89,65.72Z"/><path d="M48.93,65.72H36.75A22.88,22.88,0,0,0,13.89,42.87V30.68A35.08,35.08,0,0,1,48.93,65.72Z"/></svg></a>
+        </li>
+    </ul>
+</nav>
+ 
+</header>
+
+	
+
+<main class='article  obsolete-technology '>
+
+	<article>
+		<section id="content" class="article">
+			<header class="entry-header">
+				<h1 class="entry-title">
+				The Case for Minimal Web Design</h1>
+
+				<p class="summary">
+					Modern websites are bloated with megabytes of JavaScript. What if we went back to basics?
+				</p>
+				<div class="metadata">
+					
+					
+						
+							<div class="authors">
+							<span class="byline">Written by</span>
+							
+									<span class="author"><a href="//localhost:1313/authors/matt-zacharski/">Matt Zacharski</a></span>
+							
+							</div>
+						
+					
+					
+						
+
+						
+				</div>
+			</header>
+
+			<div class="entry-content"><h2 id="the-modern-web-is-heavy">The Modern Web is Heavy</h2>
+<p>The average website in 2025 weighs over 2MB. That&rsquo;s more than the entire original DOOM game. For a blog post. With text and maybe a few images.</p>
+<h3 id="what-happened">What Happened?</h3>
+<ul>
+<li>Tracking scripts</li>
+<li>Ad networks</li>
+<li>Analytics</li>
+<li>Frameworks loading frameworks</li>
+<li>Auto-playing videos</li>
+<li>Cookie consent banners</li>
+</ul>
+<p>We&rsquo;ve normalized this bloat, but it doesn&rsquo;t have to be this way.</p>
+<h2 id="going-minimal">Going Minimal</h2>
+<p>What if we stripped it all away? Just HTML, minimal CSS, and only JavaScript when absolutely necessary.</p>
+<p>Benefits:</p>
+<ul>
+<li><strong>Fast load times</strong> - Loads in milliseconds, not seconds</li>
+<li><strong>Accessibility</strong> - Works on any device, any connection</li>
+<li><strong>Longevity</strong> - Simple HTML lasts decades</li>
+<li><strong>Privacy</strong> - No trackers means no tracking</li>
+</ul>
+<blockquote>
+<p>&ldquo;Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.&rdquo; - Antoine de Saint-Exupéry</p>
+</blockquote>
+<h3 id="a-minimal-html-example">A Minimal HTML Example</h3>
+<p>Here&rsquo;s all you need for a perfectly functional webpage:</p>
+<div class="highlight"><pre tabindex="0" style="color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#963200">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f00">&lt;</span><span style="color:#00f">html</span> <span style="color:#00f">lang</span><span style="color:#f00">=</span>&#34;en&#34;<span style="color:#f00">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f00">&lt;</span><span style="color:#00f">head</span><span style="color:#f00">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f00">&lt;</span><span style="color:#00f">meta</span> <span style="color:#00f">charset</span><span style="color:#f00">=</span>&#34;UTF-8&#34;<span style="color:#f00">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f00">&lt;</span><span style="color:#00f">meta</span> <span style="color:#00f">name</span><span style="color:#f00">=</span>&#34;viewport&#34; <span style="color:#00f">content</span><span style="color:#f00">=</span>&#34;width=device-width, initial-scale=1.0&#34;<span style="color:#f00">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f00">&lt;</span><span style="color:#00f">title</span><span style="color:#f00">&gt;</span>My Page<span style="color:#f00">&lt;/</span><span style="color:#00f">title</span><span style="color:#f00">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f00">&lt;</span><span style="color:#00f">style</span><span style="color:#f00">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00f">body</span> <span style="color:#f00">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f00">max-width</span><span style="color:#f00">:</span> 650<span style="color:#f00">px</span><span style="color:#f00">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f00">margin</span><span style="color:#f00">:</span> 40<span style="color:#f00">px</span> <span style="color:#f00">auto</span><span style="color:#f00">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f00">padding</span><span style="color:#f00">:</span> 0 10<span style="color:#f00">px</span><span style="color:#f00">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f00">font</span><span style="color:#f00">:</span> 18<span style="color:#f00">px</span><span style="color:#f00">/</span>1.5 <span style="color:#00f">system-ui</span><span style="color:#f00">,</span> <span style="color:#f00">sans-serif</span><span style="color:#f00">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f00">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f00">&lt;/</span><span style="color:#00f">style</span><span style="color:#f00">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f00">&lt;/</span><span style="color:#00f">head</span><span style="color:#f00">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f00">&lt;</span><span style="color:#00f">body</span><span style="color:#f00">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f00">&lt;</span><span style="color:#00f">h1</span><span style="color:#f00">&gt;</span>Hello World<span style="color:#f00">&lt;/</span><span style="color:#00f">h1</span><span style="color:#f00">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f00">&lt;</span><span style="color:#00f">p</span><span style="color:#f00">&gt;</span>This is a minimal webpage. It loads instantly.<span style="color:#f00">&lt;/</span><span style="color:#00f">p</span><span style="color:#f00">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f00">&lt;/</span><span style="color:#00f">body</span><span style="color:#f00">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f00">&lt;/</span><span style="color:#00f">html</span><span style="color:#f00">&gt;</span>
+</span></span></code></pre></div><p>That&rsquo;s it. No framework. No build step. No megabytes of dependencies.</p>
+<h3 id="the-performance-difference">The Performance Difference</h3>
+<p>Compare these typical page weights:</p>
+<pre tabindex="0"><code>Minimal HTML site:     ~10 KB
+Medium Blog:           ~500 KB
+Modern SPA:            ~2-3 MB
+Enterprise Dashboard:  ~5-10 MB
+</code></pre><p>A 10KB page loads almost instantly, even on slow connections. A 5MB page? Not so much.</p>
+<h2 id="this-site">This Site</h2>
+<p>That&rsquo;s what this site aims to be - lightweight, fast, and functional. No build step complexity, no client-side hydration, no bundle splitting.</p>
+<p>Just content that loads instantly and works everywhere.</p>
+<h3 id="measuring-success">Measuring Success</h3>
+<p>You can check page size in your browser&rsquo;s dev tools:</p>
+<div class="highlight"><pre tabindex="0" style="color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#008000">// Run this in your browser console
+</span></span></span><span style="display:flex;"><span><span style="color:#008000"></span><span style="color:#f00">const</span> <span style="color:#00f">resources</span> <span style="color:#f00">=</span> <span style="color:#00f">performance</span><span style="color:#f00">.</span><span style="color:#00f">getEntriesByType</span><span style="color:#f00">(</span>&#39;resource&#39;<span style="color:#f00">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#f00">const</span> <span style="color:#00f">totalSize</span> <span style="color:#f00">=</span> <span style="color:#00f">resources</span><span style="color:#f00">.</span><span style="color:#00f">reduce</span><span style="color:#f00">((</span><span style="color:#00f">acc</span><span style="color:#f00">,</span> <span style="color:#00f">r</span><span style="color:#f00">)</span> <span style="color:#f00">=&gt;</span> <span style="color:#00f">acc</span> <span style="color:#f00">+</span> <span style="color:#00f">r</span><span style="color:#f00">.</span><span style="color:#00f">transferSize</span><span style="color:#f00">,</span> 0<span style="color:#f00">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">console</span><span style="color:#f00">.</span><span style="color:#00f">log</span><span style="color:#f00">(</span>`Total page size: ${<span style="color:#f00">(</span><span style="color:#00f">totalSize</span> <span style="color:#f00">/</span> 1024<span style="color:#f00">).</span><span style="color:#00f">toFixed</span><span style="color:#f00">(</span>2<span style="color:#f00">)</span>} KB`<span style="color:#f00">);</span>
+</span></span></code></pre></div><p>Try it on this page, then try it on a modern web app. The difference is staggering.</p>
+<h2 id="a-better-web">A Better Web</h2>
+<p>The web started simple. Maybe it&rsquo;s time to remember that simplicity isn&rsquo;t a limitation - it&rsquo;s a feature.</p>
+<blockquote>
+<p>&ldquo;The best code is no code at all.&rdquo;</p>
+</blockquote>
+
+			</div>
+			
+			
+			<div class="post-footer">
+    <ul>
+        <li><a href="https://d69baa34.sibforms.com/serve/MUIEAJWIw9w82Dl4ua6FQArPaI-3Qb-zVTwPNabHQgFH51MiGF69Smy9LOC_HPoUmBj0emaXsXT87gcQXDPvtu-AZsJCHWhkkv21CdrcQu4GdnYAhZ-MrIPhwGDecagLzYxqfvkaqXg2ODcbJU4ByoDmzJK3ZTczDo2jcWtfn-En0MGKLVkgxx9TgdHqYoPabMJCMF-agLEclEwv">Subscribe to our newsletter</a>.</li>
+        <li> Support Low-tech Magazine via <a href="https://www.paypal.me/lowtechmagazine">Paypal</a> or <a href="https://www.patreon.com/lowtechmagazine">Patreon</a>.</li>
+        <li><a href="//localhost:1313/offline-reading/">Read Low-tech Magazine offline</a>.</li>
+    </ul>
+</div>
+
+			
+			
+		</section>
+
+		
+		
+
+		<section id="reference">
+			<div class="footnotes" role="doc-endnotes">
+			
+		</section>
+
+
+		
+		
+		
+		<section id="related" class="article-list">
+		    <h3 class="related">Related Articles</h3>
+		    <div class="post-info gray">
+		    <p class="tags">Themes:
+		        
+		            <a href="//localhost:1313/tags/web-design/" class="tag">Web Design</a>
+		        
+		            <a href="//localhost:1313/tags/minimalism/" class="tag">Minimalism</a>
+		        
+		            <a href="//localhost:1313/tags/performance/" class="tag">Performance</a>
+		        
+		    </p>
+		    </div>
+		    <div class="grid">
+				
+				 
+				
+		
+		
+		    </div>
+		</section>
+		
+		
+	</article>
+</main>
+
+	<footer class="site-footer">
+    <div id=page-size>Page Size: <span id="size-value"> $PLACEHOLDER</span></div>
+    <div id=back-to-top><a id="" href="#top" title="Back to top"> ↑ </a></div>
+    <h2>
+        <a href="//localhost:1313/">MATT←MONKEY BIZ</a>
+    </h2>
+    <div class="dashboard">
+        <ul class="grid">
+            <li>
+                <h3>Generator Stats</h3>
+                <dl id="stats">
+                </dl>
+            </li>
+            <li>
+                <h3>Weather</h3>
+                <div class="forecast"></div>
+            </li>
+            <li>
+                <h3>Info</h3>
+                <div class="footer-links">
+    <a href="//localhost:1313/about">
+  About
+</a>
+    <a href="//localhost:1313/power">
+  Power
+</a>
+    <a href="//localhost:1313/about/team">
+  Colophon
+</a>
+    <a href="//localhost:1313/donate">
+  Donate
+</a>
+<a href="/privacy">
+  Privacy Policy
+</a>
+</div>
+            </li>
+            <li>
+                <h3>Contact</h3>
+                <p>
+                    &copy; Matt<br> hello [at] infinite-monkey [dot] biz</p>
+
+                <div class="social">
+                    
+                    <a href="/feeds" type="application/atom+xml" rel="alternate" target="_blank"><svg viewBox="0 0 80 80" class="icon"><title>RSS Feed</title><circle cx="19.91" cy="58.23" r="6.86"/><path d="M67.89,65.72H55.7A41.86,41.86,0,0,0,13.89,23.91V11.73A54.06,54.06,0,0,1,67.89,65.72Z"/><path d="M48.93,65.72H36.75A22.88,22.88,0,0,0,13.89,42.87V30.68A35.08,35.08,0,0,1,48.93,65.72Z"/></svg></a>
+
+                    
+                    
+                </div>
+                
+
+            </li>
+        </ul>
+    </div>
+</footer>
+
+	<script src="//localhost:1313/js/script.js"></script>
+</body>
+</html>

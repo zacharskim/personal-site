@@ -1,0 +1,86 @@
+baseURL = '/'
+languageCode = 'en-us'
+title = 'MATT←MONKEY BIZ'
+
+buildFuture = true
+buildDrafts = false
+pagination.pagerSize = 12
+
+
+refLinksErrorLevel = 'WARNING'
+refLinksNotFoundURL = '/'
+
+timeout = 60000
+
+rssLimit = 3
+
+enableInlineShortcodes = true
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.goldmark.parser.attribute]
+    block = true
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ''
+    hl_inline = false
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    noHl = false
+    style = 'onesenterprise'
+    tabWidth = 4
+
+[permalinks]
+  posts = '/:year/:month/:slugorfilename/'
+  categories = '/:slug/'
+
+[params]
+  author = 'Matt'
+  description = 'Powering the web one pedal at a time'
+
+[menu]
+  [[menu.main]]
+    identifier = 'about'
+    name = 'About'
+    url = '/about/'
+    weight = 1
+  [[menu.main]]
+    identifier = 'blog'
+    name = 'Blog'
+    url = '/blog/'
+    weight = 2
+  [[menu.main]]
+    identifier = 'projects'
+    name = 'Projects'
+    url = '/projects/'
+    weight = 3
+  [[menu.main]]
+    identifier = 'generator'
+    name = 'Generator'
+    url = '/generator/'
+    weight = 4
+  [[menu.main]]
+    identifier = 'archives'
+    name = 'Archive'
+    url = '/archives/'
+    weight = 5
+
+
+[taxonomies]
+  author = 'authors'
+  tag = 'tags'
+  category = 'categories'
+
+[related]
+  includeNewer = true
+  threshold = 80
+  toLower = false
+  [[related.indices]]
+    name = 'tags'
+    weight = 100

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Learning to Live in the Terminal | MATT←MONKEY BIZ</title>
+	<meta name="description" content="Powering the web one pedal at a time">
+	<meta name="author" content="Matt">
+
+	<link rel="icon" href="//localhost:1313/icons/sun.svg">
+
+	
+	<link rel="stylesheet" href="//localhost:1313/css/style.css"><meta property="og:title" content="Learning to Live in the Terminal" />
+<meta name="twitter:title" content="Learning to Live in the Terminal"/>
+
+<meta property="og:description" content="Why mastering command-line tools can make you more productive and give you a deeper understanding of how computers work." />
+
+<meta name="twitter:description" content="Why mastering command-line tools can make you more productive and give you a deeper understanding of how computers work."/>
+
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//localhost:1313/terminal-living/" />
+
+<meta property="og:image" content="//localhost:1313/icons/sun.svg" />
+<meta property="og:image:secure_url" content="//localhost:1313/icons/sun.svg" />
+<meta property="og:image:type" content="image/svg+xml">
+<meta property="og:image:width" content="300" />
+<meta property="og:image:height" content="300" />
+<meta name="twitter:card" content="summary"/><meta property="article:section" content="" />
+<meta property="article:published_time" content="2025-01-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2025-01-10T00:00:00+00:00" /><meta property="og:site_name" content="MATT←MONKEY BIZ" />
+
+
+<meta property="article:author" content="Matt Zacharski" />
+<meta name="citation_author" content="Matt Zacharski">
+
+
+<meta property="article:tag" content="terminal" />
+<meta property="article:tag" content="productivity" />
+<meta property="article:tag" content="tools" />
+</head>
+<body id="learning-to-live-in-the-terminal">
+	<div class="battery_bg">
+	<div id="battery_data" class="bat_status" data-charging="no">
+	  <a href="//localhost:1313/power/" title="Power">
+	    <span id="charge_icon">
+	      <svg class="icon battery-svg" viewBox="0 0 500 500"><title>Battery used</title><polygon class="svg_stroke" points="327.01 127.16 327.01 47.31 172.99 47.31 172.99 127.16 115.52 127.16 115.52 452.69 384.48 452.69 384.48 127.16 327.01 127.16"/><polygon class="svg_fill" points="357.64 408.86 158.26 408.86 158.26 209.49 357.64 408.86"/></svg>
+	      
+	      <svg class="icon sun-svg" viewBox="0 0 500 500"><title>Battery charging</title><circle class="svg_fill" cx="248.48" cy="252.55" r="97.03"/><rect class="svg_fill" x="234.53" y="17.45" width="27.9" height="112.39"/><rect class="svg_fill" x="234.53" y="375.25" width="27.9" height="112.39"/><rect class="svg_fill" x="413.42" y="196.35" width="27.9" height="112.39" transform="translate(679.92 -174.83) rotate(90)"/><rect class="svg_fill" x="55.63" y="196.35" width="27.9" height="112.39" transform="translate(322.12 182.97) rotate(90)"/><rect class="svg_fill" x="361.03" y="69.85" width="27.9" height="112.39" transform="translate(198.96 -228.23) rotate(45)"/><rect class="svg_fill" x="108.03" y="322.85" width="27.9" height="112.39" transform="translate(303.75 24.77) rotate(45)"/><rect class="svg_fill" x="361.03" y="322.85" width="27.9" height="112.39" transform="translate(908.15 381.93) rotate(135)"/><rect class="svg_fill" x="108.03" y="69.85" width="27.9" height="112.39" transform="translate(297.35 128.93) rotate(135)"/></svg>
+	    </span>
+	    <span id="level"></span></a>
+	</div>
+	<div id="battery">
+	</div>
+</div>
+	<header class="site-header">
+  <h1><a id="top" href="//localhost:1313/">MATT←MONKEY BIZ</a></h1>
+  <div class="subtitle">
+     <a href="//localhost:1313/generator">Powering the web one pedal at a time
+    </a>
+  </div>
+  <nav id="menu">
+    <div id="menu-s">
+        <span id="m-btn">menu</span>
+    </div>
+    <ul id="menu-list">
+     
+         
+        <li class="">
+            <a href=" /about/ " data-nav="about" >
+                <span>About</span>
+            </a>
+        </li>
+        
+        <li class="">
+            <a href=" /blog/ " data-nav="blog" >
+                <span>Blog</span>
+            </a>
+        </li>
+        
+        <li class="">
+            <a href=" /projects/ " data-nav="projects" >
+                <span>Projects</span>
+            </a>
+        </li>
+        
+        <li class="">
+            <a href=" /generator/ " data-nav="generator" >
+                <span>Generator</span>
+            </a>
+        </li>
+        
+        <li class="">
+            <a href=" /archives/ " data-nav="archive" >
+                <span>Archive</span>
+            </a>
+        </li>
+        
+        <li class="rss">
+            <a href='' target="_blank"><svg viewBox="0 0 80 80" class="icon"><title>Newsletter</title><path d="M4.95,13.14v55H74.33v-55Zm54.34,8.12L39.64,39.74,20,21.26ZM13.07,60V25.91l26.56,25,26.57-25V60Z"/></svg></a>
+            <a href="/feeds" type="application/atom+xml" rel="alternate" target="_blank"><svg viewBox="0 0 80 80" class="icon"><title>RSS Feed</title><circle cx="19.91" cy="58.23" r="6.86"/><path d="M67.89,65.72H55.7A41.86,41.86,0,0,0,13.89,23.91V11.73A54.06,54.06,0,0,1,67.89,65.72Z"/><path d="M48.93,65.72H36.75A22.88,22.88,0,0,0,13.89,42.87V30.68A35.08,35.08,0,0,1,48.93,65.72Z"/></svg></a>
+        </li>
+    </ul>
+</nav>
+ 
+</header>
+
+	
+
+<main class='article  high-tech-problems '>
+
+	<article>
+		<section id="content" class="article">
+			<header class="entry-header">
+				<h1 class="entry-title">
+				Learning to Live in the Terminal</h1>
+
+				<p class="summary">
+					Why mastering command-line tools can make you more productive and give you a deeper understanding of how computers work.
+				</p>
+				<div class="metadata">
+					
+					
+						
+							<div class="authors">
+							<span class="byline">Written by</span>
+							
+									<span class="author"><a href="//localhost:1313/authors/matt-zacharski/">Matt Zacharski</a></span>
+							
+							</div>
+						
+					
+					
+						
+
+						
+				</div>
+			</header>
+
+			<div class="entry-content"><h2 id="embracing-the-command-line">Embracing the Command Line</h2>
+<p>There&rsquo;s something satisfying about working entirely in the terminal. No mouse, no GUI bloat - just you, your keyboard, and a blinking cursor.</p>
+<div class="article-img ">
+<figure data-imgstate="dither">
+<img src="//localhost:1313/terminal-living/images/dithers/4860001_2_dithered.png" alt='A clean terminal setup - simple, focused, and powerful.' data-original="//localhost:1313/terminal-living/images/4860001_2_hu_5256dc330b487fdd.webp" data-dither="/terminal-living/images/dithers/4860001_2_dithered.png" loading="lazy"/> </figure>
+<div class="figure-controls">
+<figcaption class="caption">
+<p>A clean terminal setup - simple, focused, and powerful.
+<svg class="dither-toggle icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+<rect class="svg_fill" x="13.51" y="13.58" width="24.28" height="24.28"/><rect class="svg_fill" x="37.93" y="37.86" width="24.28" height="24.28"/><rect class="svg_fill" x="62.21" y="13.58" width="24.28" height="24.28"/><rect class="svg_fill" x="13.51" y="62.14" width="24.28" height="24.28"/><rect class="svg_fill" x="62.21" y="62.14" width="24.28" height="24.28"/>
+</svg></p>
+<div class="imgindicator">
+<span class="tooltip view-orig">
+  View original image
+</span>
+<span class="tooltip view-dither">
+  View dithered image
+</span>
+</div>
+</figcaption>
+</div>
+</div>
+<h3 id="the-learning-curve">The Learning Curve</h3>
+<p>I&rsquo;ll be honest - it&rsquo;s intimidating at first. Commands like <code>grep</code>, <code>find</code>, and <code>sed</code> seem arcane. But once you start understanding the patterns, it clicks.</p>
+<div class="article-img ">
+<figure data-imgstate="dither">
+<img src="//localhost:1313/terminal-living/images/dithers/4863999_2_dithered.png" alt='Learning terminal commands can feel overwhelming at first, but the patterns start to make sense.' data-original="//localhost:1313/terminal-living/images/4863999_2_hu_48da64794bb1106.webp" data-dither="/terminal-living/images/dithers/4863999_2_dithered.png" loading="lazy"/> </figure>
+<div class="figure-controls">
+<figcaption class="caption">
+<p>Learning terminal commands can feel overwhelming at first, but the patterns start to make sense.
+<svg class="dither-toggle icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+<rect class="svg_fill" x="13.51" y="13.58" width="24.28" height="24.28"/><rect class="svg_fill" x="37.93" y="37.86" width="24.28" height="24.28"/><rect class="svg_fill" x="62.21" y="13.58" width="24.28" height="24.28"/><rect class="svg_fill" x="13.51" y="62.14" width="24.28" height="24.28"/><rect class="svg_fill" x="62.21" y="62.14" width="24.28" height="24.28"/>
+</svg></p>
+<div class="imgindicator">
+<span class="tooltip view-orig">
+  View original image
+</span>
+<span class="tooltip view-dither">
+  View dithered image
+</span>
+</div>
+</figcaption>
+</div>
+</div>
+<blockquote>
+<p>&ldquo;The command line is the ultimate power tool. It&rsquo;s always been there, waiting for you to learn its language.&rdquo;</p>
+</blockquote>
+<h3 id="why-bother">Why Bother?</h3>
+<p>In a world of beautiful GUIs, why would anyone choose to type commands? A few reasons:</p>
+<ul>
+<li><strong>Speed</strong> - Keyboard is faster than mouse once you know what you&rsquo;re doing</li>
+<li><strong>Automation</strong> - Scripts can do repetitive tasks for you</li>
+<li><strong>Remote work</strong> - SSH into servers without needing a graphical interface</li>
+<li><strong>Understanding</strong> - You see exactly what&rsquo;s happening</li>
+</ul>
+<h2 id="tools-worth-learning">Tools Worth Learning</h2>
+<p>Some essentials that have changed my workflow:</p>
+<ul>
+<li><strong>tmux</strong> - Multiple terminal sessions in one window</li>
+<li><strong>vim/helix</strong> - Terminal-based text editors</li>
+<li><strong>git</strong> - Version control from the command line</li>
+<li><strong>grep/ripgrep</strong> - Search through files blazingly fast</li>
+</ul>
+<h3 id="practical-examples">Practical Examples</h3>
+<p>Here&rsquo;s a simple example of the power of command chaining:</p>
+<div class="highlight"><pre tabindex="0" style="color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#008000"># Find all markdown files modified in the last 7 days</span>
+</span></span><span style="display:flex;"><span>find . -name &#34;*.md&#34; -mtime -7
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#008000"># Count lines of code in all JavaScript files</span>
+</span></span><span style="display:flex;"><span>find . -name &#34;*.js&#34; <span style="color:#f00">|</span> xargs wc -l
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#008000"># Search for a pattern across multiple files</span>
+</span></span><span style="display:flex;"><span>grep -r &#34;TODO&#34; --include<span style="color:#f00">=</span>&#34;*.py&#34; .
+</span></span></code></pre></div><p>You can pipe commands together to create powerful one-liners:</p>
+<div class="highlight"><pre tabindex="0" style="color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#008000"># Find the 10 largest files in current directory</span>
+</span></span><span style="display:flex;"><span>du -sh * <span style="color:#f00">|</span> sort -rh <span style="color:#f00">|</span> head -10
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#008000"># Count unique words in a file</span>
+</span></span><span style="display:flex;"><span>cat article.txt <span style="color:#f00">|</span> tr &#39; &#39; &#39;\n&#39; <span style="color:#f00">|</span> sort <span style="color:#f00">|</span> uniq -c <span style="color:#f00">|</span> sort -rn
+</span></span></code></pre></div><h3 id="my-current-setup">My Current Setup</h3>
+<p>Here&rsquo;s a peek at my <code>.bashrc</code> aliases that save me time every day:</p>
+<div class="highlight"><pre tabindex="0" style="color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#008000"># Navigation shortcuts</span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">alias</span> ..<span style="color:#f00">=</span>&#39;cd ..&#39;
+</span></span><span style="display:flex;"><span><span style="color:#00f">alias</span> ...<span style="color:#f00">=</span>&#39;cd ../..&#39;
+</span></span><span style="display:flex;"><span><span style="color:#00f">alias</span> <span style="color:#00f">ll</span><span style="color:#f00">=</span>&#39;ls -lah&#39;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#008000"># Git shortcuts</span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">alias</span> <span style="color:#00f">gs</span><span style="color:#f00">=</span>&#39;git status&#39;
+</span></span><span style="display:flex;"><span><span style="color:#00f">alias</span> <span style="color:#00f">gc</span><span style="color:#f00">=</span>&#39;git commit&#39;
+</span></span><span style="display:flex;"><span><span style="color:#00f">alias</span> <span style="color:#00f">gp</span><span style="color:#f00">=</span>&#39;git push&#39;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#008000"># Quick file search</span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">alias</span> <span style="color:#00f">f</span><span style="color:#f00">=</span>&#39;find . -name&#39;
+</span></span></code></pre></div><div class="article-img ">
+<figure data-imgstate="dither">
+<img src="//localhost:1313/terminal-living/images/dithers/4866783_2_dithered.png" alt='Customizing your shell configuration is key to making the terminal feel like home.' data-original="//localhost:1313/terminal-living/images/4866783_2_hu_f55e5baccdccc315.webp" data-dither="/terminal-living/images/dithers/4866783_2_dithered.png" loading="lazy"/> </figure>
+<div class="figure-controls">
+<figcaption class="caption">
+<p>Customizing your shell configuration is key to making the terminal feel like home.
+<svg class="dither-toggle icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+<rect class="svg_fill" x="13.51" y="13.58" width="24.28" height="24.28"/><rect class="svg_fill" x="37.93" y="37.86" width="24.28" height="24.28"/><rect class="svg_fill" x="62.21" y="13.58" width="24.28" height="24.28"/><rect class="svg_fill" x="13.51" y="62.14" width="24.28" height="24.28"/><rect class="svg_fill" x="62.21" y="62.14" width="24.28" height="24.28"/>
+</svg></p>
+<div class="imgindicator">
+<span class="tooltip view-orig">
+  View original image
+</span>
+<span class="tooltip view-dither">
+  View dithered image
+</span>
+</div>
+</figcaption>
+</div>
+</div>
+<h2 id="the-journey-continues">The Journey Continues</h2>
+<p>I&rsquo;m still learning. Every day I discover a new flag, a new pipe combination, a better way to do something. That&rsquo;s the beauty of it - there&rsquo;s always more to explore.</p>
+<blockquote>
+<p>&ldquo;Unix is user-friendly. It&rsquo;s just very selective about who its friends are.&rdquo;</p>
+</blockquote>
+
+			</div>
+			
+			
+			<div class="post-footer">
+    <ul>
+        <li><a href="https://d69baa34.sibforms.com/serve/MUIEAJWIw9w82Dl4ua6FQArPaI-3Qb-zVTwPNabHQgFH51MiGF69Smy9LOC_HPoUmBj0emaXsXT87gcQXDPvtu-AZsJCHWhkkv21CdrcQu4GdnYAhZ-MrIPhwGDecagLzYxqfvkaqXg2ODcbJU4ByoDmzJK3ZTczDo2jcWtfn-En0MGKLVkgxx9TgdHqYoPabMJCMF-agLEclEwv">Subscribe to our newsletter</a>.</li>
+        <li> Support Low-tech Magazine via <a href="https://www.paypal.me/lowtechmagazine">Paypal</a> or <a href="https://www.patreon.com/lowtechmagazine">Patreon</a>.</li>
+        <li><a href="//localhost:1313/offline-reading/">Read Low-tech Magazine offline</a>.</li>
+    </ul>
+</div>
+
+			
+			
+		</section>
+
+		
+		
+
+		<section id="reference">
+			<div class="footnotes" role="doc-endnotes">
+			
+		</section>
+
+
+		
+		
+		
+		<section id="related" class="article-list">
+		    <h3 class="related">Related Articles</h3>
+		    <div class="post-info gray">
+		    <p class="tags">Themes:
+		        
+		            <a href="//localhost:1313/tags/terminal/" class="tag">Terminal</a>
+		        
+		            <a href="//localhost:1313/tags/productivity/" class="tag">Productivity</a>
+		        
+		            <a href="//localhost:1313/tags/tools/" class="tag">Tools</a>
+		        
+		    </p>
+		    </div>
+		    <div class="grid">
+				
+				 
+				
+		
+		
+		    </div>
+		</section>
+		
+		
+	</article>
+</main>
+
+	<footer class="site-footer">
+    <div id=page-size>Page Size: <span id="size-value"> $PLACEHOLDER</span></div>
+    <div id=back-to-top><a id="" href="#top" title="Back to top"> ↑ </a></div>
+    <h2>
+        <a href="//localhost:1313/">MATT←MONKEY BIZ</a>
+    </h2>
+    <div class="dashboard">
+        <ul class="grid">
+            <li>
+                <h3>Generator Stats</h3>
+                <dl id="stats">
+                </dl>
+            </li>
+            <li>
+                <h3>Weather</h3>
+                <div class="forecast"></div>
+            </li>
+            <li>
+                <h3>Info</h3>
+                <div class="footer-links">
+    <a href="//localhost:1313/about">
+  About
+</a>
+    <a href="//localhost:1313/power">
+  Power
+</a>
+    <a href="//localhost:1313/about/team">
+  Colophon
+</a>
+    <a href="//localhost:1313/donate">
+  Donate
+</a>
+<a href="/privacy">
+  Privacy Policy
+</a>
+</div>
+            </li>
+            <li>
+                <h3>Contact</h3>
+                <p>
+                    &copy; Matt<br> hello [at] infinite-monkey [dot] biz</p>
+
+                <div class="social">
+                    
+                    <a href="/feeds" type="application/atom+xml" rel="alternate" target="_blank"><svg viewBox="0 0 80 80" class="icon"><title>RSS Feed</title><circle cx="19.91" cy="58.23" r="6.86"/><path d="M67.89,65.72H55.7A41.86,41.86,0,0,0,13.89,23.91V11.73A54.06,54.06,0,0,1,67.89,65.72Z"/><path d="M48.93,65.72H36.75A22.88,22.88,0,0,0,13.89,42.87V30.68A35.08,35.08,0,0,1,48.93,65.72Z"/></svg></a>
+
+                    
+                    
+                </div>
+                
+
+            </li>
+        </ul>
+    </div>
+</footer>
+
+	<script src="//localhost:1313/js/script.js"></script>
+</body>
+</html>
