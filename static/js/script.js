@@ -70,29 +70,21 @@ function populateData(data) {
 
 
 function populateForecast(data) {
-    const weather_ignore = ["snow", "sleet", "wind", "fog"]; //because Barcelona is paradise
-    const weather_data = ["today_icon", "tomorrow_icon", "day_after_t_icon"];
-    const weather_days = ["today", "tomorrow", "day after tomorrow"];
-    let forecast = "";
+    let commitHtml = "";
+    const repoUrl = "https://github.com/mattzacharski/personal-site";
 
-    for (let i = 0; i < weather_data.length; i++) {
-        
-        let icon_name = weather_data[i]
-        let text = data[icon_name].replace(/-/g, " ");
-        let weather_icon;
-        //use cloud icon for all overcast weather
-        if (weather_ignore.includes(data[icon_name])) {
-            weather_icon = "cloudy";
-        } else {
-            weather_icon = data[icon_name];
-        }
-        forecast += '<span class="weather_day" id="' + weather_days[i] + '" title="' + text + '">' + weather_days[i] + '</span><span class="weather_icon ' + weather_icon + '"> </span><span class="weather_text"> ' + text + '</span>';
+    if (data.latest_commit) {
+        let commit = data.latest_commit;
+        let commitUrl = repoUrl + "/commit/" + commit.sha;
+        commitHtml += '<div class="commit-date">' + commit.date + '</div>' +
+                     '<div class="commit-sha"><a href="' + commitUrl + '" target="_blank">' + commit.sha + '</a></div>' +
+                     '<div class="commit-message">' + commit.message + '</div>';
     }
 
-    let weatherinfo = document.querySelectorAll('.forecast');
+    let forecastElements = document.querySelectorAll('.forecast');
 
-    [].forEach.call(weatherinfo, function(target) {
-        target.innerHTML = forecast;
+    [].forEach.call(forecastElements, function(target) {
+        target.innerHTML = commitHtml;
     });
 }
 

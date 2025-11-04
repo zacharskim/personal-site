@@ -1,0 +1,16 @@
+{
+  "charge": 75,
+  "charging": "yes",
+  "W": 180,
+  "A": 15,
+  "V": 12.8,
+  "temperature": 28,
+  "load_15": 0.5,
+  "local_time": "3:45 PM",
+  "uptime": "2 weeks, 3 days, 5 hours",
+  "latest_commit": {
+    "message": "Update footer styling",
+    "date": "10 May 2025, 12:52 UTC",
+    "sha": "23hjh2390j"
+  }
+}
