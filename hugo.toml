@@ -42,7 +42,7 @@ enableInlineShortcodes = true
 
 [params]
   author = 'Matt'
-  description = 'Powering the web one pedal at a time'
+  description = 'This is a bike powered website, which means it sometimes goes offline'
 
 [menu]
   [[menu.main]]
