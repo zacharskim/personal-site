@@ -54,7 +54,7 @@ jobs:
 
       - name: Calculate page sizes
         run: |
-          python3 utils/calculate_size.py --directory public/ --baseURL https://mattzacharski.github.io/personal-site
+          python3 utils/calculate_size.py --directory public/ --baseURL https://infinite-monkey.biz
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
