@@ -14,7 +14,7 @@
       </li>
       <li>
         {{ with .GitInfo }}
-        <div class="commit-date">{{ .AuthorDate.Format "2 Jan 2006, 15:04 MST" }}</div>
+        <div class="commit-date">{{ .AuthorDate.UTC.Format "2 Jan 2006, 15:04" }} UTC</div>
         <div class="commit-sha"><a href="https://github.com/zacharskim/personal-site/commit/{{ .Hash }}" target="_blank">{{ .AbbreviatedHash }}</a></div>
         <div class="commit-message">{{ .Subject }}</div>
         {{ else }}
