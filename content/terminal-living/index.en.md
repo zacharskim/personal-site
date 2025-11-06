@@ -2,7 +2,6 @@
 title: "Learning to Live in the Terminal"
 date: "2025-01-10"
 summary: "Why mastering command-line tools can make you more productive and give you a deeper understanding of how computers work."
-lang: "en"
 authors: ["Matt Zacharski"]
 categories: ["High-tech Problems"]
 tags: ["terminal", "productivity", "tools"]

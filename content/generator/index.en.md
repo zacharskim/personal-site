@@ -3,7 +3,6 @@ title: "Generator"
 date: ""
 summary: "[Generator page description]"
 slug: "generator"
-lang: "en"
 authors: [""]
 categories: [""]
 tags: []

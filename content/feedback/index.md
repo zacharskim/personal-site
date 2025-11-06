@@ -3,7 +3,6 @@ title: "Feedback"
 date: ""
 summary: "I like feedback woohoo"
 slug: "feedback"
-lang: "en"
 authors: [""]
 categories: [""]
 tags: []

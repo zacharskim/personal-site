@@ -2,7 +2,6 @@
 title: "Getting Started with Static Sites"
 date: "2025-01-15"
 summary: "Exploring the benefits of static site generators and why they're making a comeback in modern web development."
-lang: "en"
 authors: ["Matt Zacharski"]
 categories: ["Low-tech Solutions"]
 tags: ["web development", "static sites"]

@@ -2,7 +2,6 @@
 title: "The Case for Minimal Web Design"
 date: "2024-12-20"
 summary: "Modern websites are bloated with megabytes of JavaScript. What if we went back to basics?"
-lang: "en"
 authors: ["Matt Zacharski"]
 categories: ["Obsolete Technology"]
 tags: ["web design", "minimalism", "performance"]

@@ -15,8 +15,8 @@
                </li> 
            </ul>
     {{ end }}
-        {{ if or (eq .Data.Plural "authors") (eq .Data.Plural "translators")}}
-        <h4>See all <a href="{{ absLangURL "contributors" }}">{{i18n "contributors" | default "Contributors" }}</a> ({{ .Language.LanguageName}})</h4>
+        {{ if (eq .Data.Plural "authors")}}
+        <h4>See all <a href="/contributors/">Contributors</a></h4>
         {{end}}
         </div>   
      

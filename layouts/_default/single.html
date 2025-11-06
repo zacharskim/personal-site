@@ -16,32 +16,13 @@
 					{{ if not (in .Params.categories "About") }}
 						{{if (.GetTerms "authors")}}
 							<div class="authors">
-							<span class="byline">{{i18n "written_by" | default "Written by" }}</span>
+							<span class="byline">Written by</span>
 							{{ range (.GetTerms "authors") }}
 									<span class="author"><a href="{{ .Permalink }}">{{ .Title }}</a></span>
 							{{ end }}
 							</div>
 						{{ end }}
 					{{ end }}
-					
-						{{ if (.GetTerms "translators") }}
-
-						<div class="translations">
-						<span class="byline">{{i18n "translated_by" | default "translated by"}}</span>
-						{{ range (.GetTerms "translators") }}
-							<span class="author"><a href="{{ .Permalink }}">{{ .Title }}</a></span>
-						{{ end }}
-						</div>
-						{{ end }}
-
-						{{ if .IsTranslated }}
-						<div class="translations">
-						<span class="byline">{{i18n "translations" | default "Translations"}}</span>
-						{{ range .Translations }}
-							<a href="{{ .Permalink }}">{{ .Lang }}</a>
-						{{ end }}
-						</div>
-						{{ end }}
 				</div>
 			</header>
 
@@ -55,13 +36,13 @@
 			{{ end }}
 		</section>
 
-		{{ $commentsfile := printf "comments.%s.md" .Lang }}
+		{{ $commentsfile := printf "comments.en.md" }}
 		{{ with .Resources.GetMatch $commentsfile }}
 		<section class="comments" id="comments">
-			<h2 id="comments-title">{{ i18n "commentstitle" | default "Comments"}} </h2>
-			<p><em>{{ i18n "commentsdescription" | default "To make a comment, please send an e-mail to solar (at) lowtechmagazine (dot) com. Your e-mail address is not used for other purposes, and will be deleted after the comment is published. If you don’t want your real name to be published, sign the e-mail with the name you want to appear."}}</em></p>
+			<h2 id="comments-title">Comments</h2>
+			<p><em>To make a comment, please send an e-mail to solar (at) lowtechmagazine (dot) com. Your e-mail address is not used for other purposes, and will be deleted after the comment is published. If you don't want your real name to be published, sign the e-mail with the name you want to appear.</em></p>
 			<details>
-				<summary><span id="comment-count"></span> {{ i18n "commentstitle" | default "Reactions"}}</summary>
+				<summary><span id="comment-count"></span> Reactions</summary>
 				<div id="comments-list">
 					{{ .Content }}
 				</div>
