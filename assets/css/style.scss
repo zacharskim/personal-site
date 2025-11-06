@@ -1236,9 +1236,12 @@ footer {
   }
 }
 
+.rc-scout__text {
+  max-width: 250px;
+  word-break: break-word;
+}
+
 .footer-links {
-  width: 100%;
-  overflow: hidden;
 
   a {
     display: block;
