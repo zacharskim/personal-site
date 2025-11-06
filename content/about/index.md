@@ -9,20 +9,5 @@ tags: []
 draft: false
 ---
 
-# About
+tbd
 
-[Your bio goes here]
-
-## What This Site Is About
-
-[Description of what you do/the site's purpose]
-
-## What's Here
-
-- Blog
-- Projects
-- Generator Dashboard
-
-## Contact
-
-[Contact info]

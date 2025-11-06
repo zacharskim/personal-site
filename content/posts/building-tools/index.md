@@ -6,6 +6,7 @@ slug: "building-tools"
 authors: ["Matt"]
 tags: ["tools", "development"]
 draft: false
+featured_image: "featured.png"
 ---
 
 [Content goes here]

@@ -12,6 +12,9 @@
 					{{ .Summary }}
 				</p>
 				<div class="metadata">
+					<div class="date">
+						<time class="published">{{ .Date | time.Format ":date_long" }}</time>
+					</div>
 					{{/*  disable metadata author for about category  */}}
 					{{ if not (in .Params.categories "About") }}
 						{{if (.GetTerms "authors")}}

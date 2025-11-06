@@ -6,6 +6,7 @@ slug: "web-design-principles"
 authors: ["Matt"]
 tags: ["web-design", "performance"]
 draft: false
+featured_image: "featured.png"
 ---
 
 [Content goes here]

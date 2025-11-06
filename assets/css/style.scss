@@ -454,6 +454,7 @@ METADATA, BYLINES
   font-family: var(--monospace);
   display: flex;
   width: 100%;
+  flex-wrap: wrap;
 
   div {
     margin-right: var(--pad-large);
@@ -461,6 +462,11 @@ METADATA, BYLINES
 
   a {
     color: var(--color-sub);
+  }
+
+  .date {
+    display: flex;
+    align-items: center;
   }
 
   .byline,

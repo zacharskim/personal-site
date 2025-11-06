@@ -5,6 +5,11 @@ summary: "[Placeholder summary for efficient code post]"
 slug: "energy-efficient-code"
 authors: ["Matt"]
 draft: false
+featured_image: "featured.png"
 ---
+
+
+{{% figure src="featured.png" %}} The accessibility of this website depends on the weather in Barcelona, Spain. {{% /figure %}}
+
 
 [Content goes here]
