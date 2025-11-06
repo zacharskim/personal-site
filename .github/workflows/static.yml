@@ -1,5 +1,5 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+# Build and deploy Hugo site to GitHub Pages
+name: Deploy Hugo site to Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -19,25 +19,51 @@ permissions:
 concurrency:
   group: "pages"
   cancel-in-progress: true
-  
 
 jobs:
-  # Single deploy job since we're just deploying
-  deploy:
+  build-and-deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-      - name: Setup Pages
-        uses: actions/configure-pages@v2
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
-          # Upload entire repository
+          python-version: '3.10'
+
+      - name: Install Python dependencies
+        run: |
+          pip install Pillow "git+https://github.com/hbldh/hitherdither" bs4
+
+      - name: Dither images
+        run: |
+          python3 utils/dither_images.py --directory content/
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.145.0'
+          extended: true
+
+      - name: Build Hugo site
+        run: hugo
+
+      - name: Calculate page sizes
+        run: |
+          python3 utils/calculate_size.py --directory public/ --baseURL https://mattzacharski.github.io/personal-site
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
           path: './public'
+
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
