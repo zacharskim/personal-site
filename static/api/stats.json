@@ -1,6 +1,6 @@
 {
-  "charge": 75,
-  "charging": "yes",
+  "charge": 80,
+  "charging": "no",
   "W": 180,
   "A": 15,
   "V": 12.8,
