@@ -56,10 +56,15 @@ enableInlineShortcodes = true
     url = '/generator/'
     weight = 2
   [[menu.main]]
+    identifier = 'feedback'
+    name = 'Feedback'
+    url = '/feedback/'
+    weight = 3
+  [[menu.main]]
     identifier = 'archives'
     name = 'Archive'
     url = '/archives/'
-    weight = 3
+    weight = 4
 
 
 [taxonomies]
