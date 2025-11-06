@@ -13,7 +13,13 @@
         <p>&copy; Matt<br>matt [at] infinite-monkey [dot] biz</p>
       </li>
       <li>
-        <div class="forecast"></div>
+        {{ with .GitInfo }}
+        <div class="commit-date">{{ .AuthorDate.Format "2 Jan 2006, 15:04 MST" }}</div>
+        <div class="commit-sha"><a href="https://github.com/zacharskim/personal-site/commit/{{ .Hash }}" target="_blank">{{ .AbbreviatedHash }}</a></div>
+        <div class="commit-message">{{ .Subject }}</div>
+        {{ else }}
+        <p>Git info not available</p>
+        {{ end }}
       </li>
       <li>
         <div class="footer-links">

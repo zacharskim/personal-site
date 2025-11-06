@@ -2,6 +2,7 @@ baseURL = 'https://infinite-monkey.biz/'
 languageCode = 'en-us'
 title = 'MATT←MONKEY BIZ'
 
+enableGitInfo = true
 buildFuture = true
 buildDrafts = false
 pagination.pagerSize = 12

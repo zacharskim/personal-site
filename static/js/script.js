@@ -71,7 +71,7 @@ function populateData(data) {
 
 function populateForecast(data) {
     let commitHtml = "";
-    const repoUrl = "https://github.com/mattzacharski/personal-site";
+    const repoUrl = "https://github.com/zacharskim/personal-site";
 
     if (data.latest_commit) {
         let commit = data.latest_commit;
