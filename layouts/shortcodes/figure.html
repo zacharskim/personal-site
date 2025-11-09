@@ -12,8 +12,7 @@
 <img src="{{with $dithered_image }}{{ .Permalink }}{{end}}" alt='{{ with $alt }}{{ $alt | markdownify| plainify }}{{ else }}{{ .Get "alt" }}{{ . | markdownify| plainify }}{{ end }}' data-original="{{if $thumb}}{{$thumb.Permalink}}{{else}}images/{{$old_filename }}{{end}}" data-dither="{{with $dithered_image }}{{ .RelPermalink }}{{end}}" loading="lazy"/> </figure>
 <div class="figure-controls">
 <figcaption class="caption">
-
-{{ .Inner  }}<svg class="dither-toggle icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+<span class="caption-text">{{ .Inner }}</span><svg class="dither-toggle icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <rect class="svg_fill" x="13.51" y="13.58" width="24.28" height="24.28"/><rect class="svg_fill" x="37.93" y="37.86" width="24.28" height="24.28"/><rect class="svg_fill" x="62.21" y="13.58" width="24.28" height="24.28"/><rect class="svg_fill" x="13.51" y="62.14" width="24.28" height="24.28"/><rect class="svg_fill" x="62.21" y="62.14" width="24.28" height="24.28"/>
   </svg>
 <div class="imgindicator">
@@ -39,8 +38,7 @@
 <img src="{{with $dithered_image }}{{ .Permalink }}{{end}}" alt='{{ with $alt }}{{ $alt | markdownify| plainify }}{{ else }}{{ .Get "alt" }}{{ . | markdownify| plainify }}{{ end }}' data-original="images/{{$old_filename }}" data-dither="{{with $dithered_image }}{{ .Permalink }}{{end}}" loading="lazy"/> </figure>
 <div class="figure-controls">
 <figcaption class="caption">
-
-{{ .Inner }}<svg class="dither-toggle icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+<span class="caption-text">{{ .Inner }}</span><svg class="dither-toggle icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <rect class="svg_fill" x="13.51" y="13.58" width="24.28" height="24.28"/><rect class="svg_fill" x="37.93" y="37.86" width="24.28" height="24.28"/><rect class="svg_fill" x="62.21" y="13.58" width="24.28" height="24.28"/><rect class="svg_fill" x="13.51" y="62.14" width="24.28" height="24.28"/><rect class="svg_fill" x="62.21" y="62.14" width="24.28" height="24.28"/>
   </svg>
 <div class="imgindicator">
