@@ -4,7 +4,7 @@ date: 2025-03-20
 summary: "[Placeholder summary for tools post]"
 slug: "building-tools"
 authors: ["Matt"]
-tags: ["tools", "development"]
+categories: ['Blog']
 draft: false
 featured_image: "featured.png"
 ---

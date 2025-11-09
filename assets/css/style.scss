@@ -37,9 +37,10 @@
   --color-sky: #f0f8ff;
   --color-sub: rgb(130 130 130);
   --color-bg: #fff5d1;
-  --color-low: #162dab;
-  --color-high: #d11305;
-  --color-obs: #006951;
+  --color-blog: #162dab;
+  --color-proj: #d11305;
+  --color-feedback: #006951;
+  --color-gen: #7c3aed;
   --pad-small: 0.25rem;
   --pad: 0.5rem;
   --pad-large: 1rem;
@@ -261,22 +262,28 @@ a:hover {
 CATEGORY COLORS
 -----------*/
 
-[data-nav="low-tech-solutions"],
-li.low-tech-solutions .category,
-#low-tech-solutions header h1 {
-  color: var(--color-low);
+[data-nav="blog"],
+li.blog .category,
+#blog header h1 {
+  color: var(--color-blog);
 }
 
-[data-nav="high-tech-problems"],
-li.high-tech-problems .category,
-#high-tech-problems header h1 {
-  color: var(--color-high);
+[data-nav="projects"],
+li.projects .category,
+#projects header h1 {
+  color: var(--color-proj);
 }
 
-[data-nav="obsolete-technology"],
-li.obsolete-technology .category,
-#obsolete-technology header h1 {
-  color: var(--color-obs);
+[data-nav="feedback"],
+li.feedback .category,
+#feedback header h1 {
+  color: var(--color-feedback);
+}
+
+[data-nav="bike-generator"],
+li.bike-generator .category,
+#bike-generator header h1 {
+  color: var(--color-gen);
 }
 
 

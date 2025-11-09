@@ -4,7 +4,7 @@ date: 2024-01-10
 summary: "[Project description goes here]"
 slug: "bike-generator-project"
 authors: ["Matt"]
-categories: ["projects"]
+categories: ["Projects"]
 tags: ["placeholder"]
 draft: false
 ---

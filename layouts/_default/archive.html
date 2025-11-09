@@ -11,10 +11,14 @@
         <div class="filter asc" id="title">
             Title
         </div>
+
+        <div class="filter asc" id="cat">
+            Theme
+        </div>
     </div>
 
     <ul>
-        {{ $posts := where .Site.RegularPages "Type" "in" "posts" }} {{ $notunlisted := where .Site.RegularPages ".Params.unlisted" "!=" "true" }} {{ $archive := $posts | intersect $notunlisted }} {{ range $archive.ByDate.Reverse }}
+        {{ $posts := where .Site.RegularPages "Type" "in" (slice "blog" "projects") }} {{ $notunlisted := where .Site.RegularPages ".Params.unlisted" "!=" "true" }} {{ $archive := $posts | intersect $notunlisted }} {{ range $archive.ByDate.Reverse }}
         <li class="{{ range .Params.categories }} {{ . | urlize }} {{ end }}">
             <article>
                 <time class="published" datetime="{{.Date }}">{{.Date | time.Format ":date_long"}}</time>

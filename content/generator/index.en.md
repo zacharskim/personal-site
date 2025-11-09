@@ -1,5 +1,5 @@
 ---
-title: "Generator"
+title: "Bike Generator"
 date: ""
 summary: "[Generator page description]"
 slug: "generator"

@@ -1,7 +1,7 @@
 {{ define "main" }}
 <main class="home article-list" >
     <!-- Recent Articles -->
-    {{ $allposts := where .Site.RegularPages "Type" "in" "posts" }}
+    {{ $allposts := where .Site.RegularPages "Type" "in" (slice "blog" "projects") }}
    
     {{ $notunlisted := where .Site.RegularPages ".Params.unlisted" "!=" "true" }}
     {{ $posts := $allposts | intersect $notunlisted }}
