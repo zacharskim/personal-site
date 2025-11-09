@@ -92,17 +92,26 @@ function populateDashboard(data) {
     let bat_text = "";
 
     if(data.charging=='no'){
-      bat_text = data.charge + "%, not charging";
+      bat_text = data.charge + "%";
     }else{
       bat_text = "charging";
     }
 
+    const now = new Date();
+    const estTime = now.toLocaleTimeString('en-US', {
+      timeZone: 'America/New_York',
+      hour: 'numeric',
+      minute: '2-digit',
+      hour12: true,
+      timeZoneName: 'short'
+    });
+
     let footer_data = [
-      ['Location', 'Barcelona'],
-      ['Time', data.local_time],
+      ['Location', 'Manhattan, NY'],
+      ['Local time', estTime],
+      ['Last Charge', 'NA'],
       ['Battery status', bat_text],
-      ['Power used', data.W],
-      ['Uptime', data.uptime]
+      ['Uptime', 'TBD']
     ];
 
     document.getElementById('stats').innerHTML = pushData(footer_data).join("");
