@@ -3,7 +3,7 @@ title: "Feedback"
 date: 2025-11-11
 summary: "Big Fan of [Feedback](https://www.admonymous.co/matt-zacharski)"
 slug: "feedback"
-authors: ["Matt"]
+authors: [""]
 categories: [""]
 tags: []
 ---
