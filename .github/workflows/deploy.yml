@@ -46,4 +46,4 @@ jobs:
           key: ${{ secrets.PI_SSH_KEY }}
           source: "public/"
           target: "/var/www/personal-site/"
-          rm: true
+          overwrite: true
