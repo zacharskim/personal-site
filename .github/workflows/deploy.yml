@@ -45,5 +45,5 @@ jobs:
           username: mattz
           key: ${{ secrets.PI_SSH_KEY }}
           source: "public/"
-          target: "/home/mattz/personal-site/"
+          target: "/var/www/personal-site/"
           rm: true
