@@ -1,0 +1,21 @@
+name: Deploy to Pi
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to Pi
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.PI_HOST }}
+          username: mattz
+          key: ${{ secrets.PI_SSH_KEY }}
+          script: |
+            cd /home/mattz/personal-site
+            git pull
+            hugo
