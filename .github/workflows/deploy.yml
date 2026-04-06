@@ -44,6 +44,7 @@ jobs:
           host: ${{ secrets.PI_HOST }}
           username: mattz
           key: ${{ secrets.PI_SSH_KEY }}
-          source: "public/"
+          source: "public/*"
           target: "/var/www/personal-site/"
+          strip_components: 1
           overwrite: true
