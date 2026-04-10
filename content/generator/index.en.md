@@ -9,7 +9,7 @@ tags: []
 featured_image: ""
 ---
 
-## Generator Stats
+## Battery Stats
 
 [Generator stats will go here]
 <dl id="server">
