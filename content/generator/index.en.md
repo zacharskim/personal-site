@@ -11,7 +11,7 @@ featured_image: ""
 
 ## Battery Stats
 
-[Generator stats will go here]
+[Stats will go here]
 <dl id="server">
 </dl>
 
