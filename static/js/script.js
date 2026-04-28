@@ -1,6 +1,6 @@
 // console.log('script loaded');
 
-let url = "/api/stats.json";  
+let url = "/api/stats.json";
 let data;
 let solar_stats = [];
 let battery_stats = [];
@@ -15,137 +15,141 @@ async function loadJSON() {
   populateDashboard(data);
   populateForecast(data);
 
-  if (window.location.href.indexOf('/power/') > -1) {
-      //load general stats on power page
-      populateData(data);
-  }  
+  if (window.location.href.indexOf("/power/") > -1) {
+    //load general stats on power page
+    populateData(data);
+  }
 }
 
-
 function setupBatteryMeter(data) {
-    //setup visible battery level
-    let level = parseInt(data.charge);
-    let indicator = document.getElementById('battery_data');
-    document.getElementById('battery').style.height = (100-level) + '%';
-    indicator.style.top = (100-level)  + '%';
+  //setup visible battery level
+  let level = parseInt(data.charge);
+  let indicator = document.getElementById("battery_data");
+  document.getElementById("battery").style.height = 100 - level + "%";
+  indicator.style.top = 100 - level + "%";
 
-    if (data.charging == "no") {
-        // battery is draining, show battery level
-        document.getElementById('level').textContent = level;
-    } else {
-        // sun is out!
-        indicator.setAttribute('data-charging', 'yes');
-    }
-
+  if (data.charging == "no") {
+    // battery is draining, show battery level
+    document.getElementById("level").textContent = level;
+  } else {
+    // sun is out!
+    indicator.setAttribute("data-charging", "yes");
+  }
 }
 
 function pushData(arr) {
-    // returns a list of dt/dd pairs from a two-dimensional array
-    let stats = [];
-    for (i = 0; i < arr.length; i++) {
-        stats.push("<dt>" + arr[i][0] + "</dt><dd>" + arr[i][1] + "</dd>");
-    }
-    return stats;
+  // returns a list of dt/dd pairs from a two-dimensional array
+  let stats = [];
+  for (i = 0; i < arr.length; i++) {
+    stats.push("<dt>" + arr[i][0] + "</dt><dd>" + arr[i][1] + "</dd>");
+  }
+  return stats;
 }
 
 function populateData(data) {
-    let load = ((data.load_15 / 2) * 100).toFixed(2) + '%';
+  let load = ((data.load_15 / 2) * 100).toFixed(2) + "%";
 
-    let general_stats = [
-        ["Local time", data.local_time],
-        ["Uptime", data.uptime],
-        ["Power usage", data.W],
-        ["Current draw", data.A],
-        ["Voltage", data.V],
-        ["CPU temperature", data.temperature + "°C"],
-        ["CPU load average *", load],
-        ["Solar panel active", data.charging],
-        ["Battery capacity", data.charge + "%"]
-    ];
+  let general_stats = [
+    ["Local time", data.local_time],
+    ["Uptime", data.uptime],
+    ["Power usage", data.W],
+    ["Current draw", data.A],
+    ["Voltage", data.V],
+    ["CPU temperature", data.temperature + "°C"],
+    ["CPU load average *", load],
+    ["Solar panel active", data.charging],
+    ["Battery capacity", data.charge + "%"],
+  ];
 
-    let dl = document.getElementById('server');
-    dl.innerHTML = pushData(general_stats).join("");
+  let dl = document.getElementById("server");
+  dl.innerHTML = pushData(general_stats).join("");
 }
 
-
 function populateForecast(data) {
-    let commitHtml = "";
-    const repoUrl = "https://github.com/zacharskim/personal-site";
+  let commitHtml = "";
+  const repoUrl = "https://github.com/zacharskim/personal-site";
 
-    if (data.latest_commit) {
-        let commit = data.latest_commit;
-        let commitUrl = repoUrl + "/commit/" + commit.sha;
-        commitHtml += '<div class="commit-date">' + commit.date + '</div>' +
-                     '<div class="commit-sha"><a href="' + commitUrl + '" target="_blank">' + commit.sha + '</a></div>' +
-                     '<div class="commit-message">' + commit.message + '</div>';
-    }
+  if (data.latest_commit) {
+    let commit = data.latest_commit;
+    let commitUrl = repoUrl + "/commit/" + commit.sha;
+    commitHtml +=
+      '<div class="commit-date">' +
+      commit.date +
+      "</div>" +
+      '<div class="commit-sha"><a href="' +
+      commitUrl +
+      '" target="_blank">' +
+      commit.sha +
+      "</a></div>" +
+      '<div class="commit-message">' +
+      commit.message +
+      "</div>";
+  }
 
-    let forecastElements = document.querySelectorAll('.forecast');
+  let forecastElements = document.querySelectorAll(".forecast");
 
-    [].forEach.call(forecastElements, function(target) {
-        target.innerHTML = commitHtml;
-    });
+  [].forEach.call(forecastElements, function (target) {
+    target.innerHTML = commitHtml;
+  });
 }
 
 function populateDashboard(data) {
-    let bat_text = "";
+  let bat_text = "";
 
-    if(data.charging=='no'){
-      bat_text = data.charge + "%";
-    }else{
-      bat_text = "charging";
-    }
+  if (data.charging == "no") {
+    bat_text = data.charge + "%";
+  } else {
+    bat_text = "charging";
+  }
 
-    const now = new Date();
-    const estTime = now.toLocaleTimeString('en-US', {
-      timeZone: 'America/New_York',
-      hour: 'numeric',
-      minute: '2-digit',
-      hour12: true,
-      timeZoneName: 'short'
-    });
+  const now = new Date();
+  const estTime = now.toLocaleTimeString("en-US", {
+    timeZone: "America/New_York",
+    hour: "numeric",
+    minute: "2-digit",
+    hour12: true,
+    timeZoneName: "short",
+  });
 
-    let footer_data = [
-      ['Location', 'Manhattan, NY'],
-      ['Local time', estTime],
-      ['Charging', data.charging ?? 'NA'],
-      ['Battery status', bat_text],
-      ['Uptime', data.uptime ?? 'TBD']
-    ];
+  let footer_data = [
+    ["Location", "Manhattan, NY"],
+    ["Local time", estTime],
+    ["Charging", data.charging ?? "NA"],
+    ["Battery status", bat_text],
+    ["Uptime", data.uptime ?? "TBD"],
+  ];
+  console.log(footer_data);
 
-    document.getElementById('stats').innerHTML = pushData(footer_data).join("");
+  document.getElementById("stats").innerHTML = pushData(footer_data).join("");
 }
-
 
 //mobile menu toggle
-const mobilemenu = document.getElementById('m-btn');
-    mobilemenu.addEventListener('click', function() {
-        console.log('togglemenu');
-        document.getElementById('menu-list').classList.toggle("show");
-    });
+const mobilemenu = document.getElementById("m-btn");
+mobilemenu.addEventListener("click", function () {
+  console.log("togglemenu");
+  document.getElementById("menu-list").classList.toggle("show");
+});
 
-
-const comments = document.querySelectorAll('.comment');
-if ( comments.length > 0 ){
-    //update comment count
-    document.getElementById('comment-count').innerText = comments.length;
+const comments = document.querySelectorAll(".comment");
+if (comments.length > 0) {
+  //update comment count
+  document.getElementById("comment-count").innerText = comments.length;
 }
 
+const dither_icons = document.querySelectorAll(".dither-toggle");
+dither_icons.forEach((icon) => {
+  icon.addEventListener("click", function () {
+    let figure = icon.closest(".figure-controls").previousElementSibling;
+    let img = figure.querySelector("img");
 
-const dither_icons = document.querySelectorAll('.dither-toggle');
-dither_icons.forEach(icon => {
-	icon.addEventListener('click', function() {
-	    let figure = icon.closest('.figure-controls').previousElementSibling;
-	    let img = figure.querySelector('img');
-
-	    if( figure.getAttribute('data-imgstate') == "dither"){
-	    	figure.setAttribute('data-imgstate', 'undither');	    	
-	    	let original = img.getAttribute('data-original');
-	    	img.src = original;
-	    }else{
-	    	figure.setAttribute('data-imgstate', 'dither');
-	    	let dither= img.getAttribute('data-dither');
-	    	img.src = dither;
-	    }    
-	});
+    if (figure.getAttribute("data-imgstate") == "dither") {
+      figure.setAttribute("data-imgstate", "undither");
+      let original = img.getAttribute("data-original");
+      img.src = original;
+    } else {
+      figure.setAttribute("data-imgstate", "dither");
+      let dither = img.getAttribute("data-dither");
+      img.src = dither;
+    }
+  });
 });
