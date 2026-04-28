@@ -108,9 +108,9 @@ function populateDashboard(data) {
     let footer_data = [
       ['Location', 'Manhattan, NY'],
       ['Local time', estTime],
-      ['Last Charge', 'NA'],
+      ['Charging', data.charging ?? 'NA'],
       ['Battery status', bat_text],
-      ['Uptime', 'TBD']
+      ['Uptime', data.uptime ?? 'TBD']
     ];
 
     document.getElementById('stats').innerHTML = pushData(footer_data).join("");
