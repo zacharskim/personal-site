@@ -96,7 +96,7 @@ function populateForecast(data) {
 function populateDashboard(data) {
   let bat_text = "";
 
-  if (data.charging == "no") {
+  if (data.charging == "No") {
     bat_text = data.charge + "%";
   } else {
     bat_text = "charging";
