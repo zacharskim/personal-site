@@ -28,7 +28,7 @@ function setupBatteryMeter(data) {
   document.getElementById("battery").style.height = 100 - level + "%";
   indicator.style.top = 100 - level + "%";
 
-  if (data.charging == "no") {
+  if (data.charging == "No") {
     // battery is draining, show battery level
     document.getElementById("level").textContent = level;
   } else {
